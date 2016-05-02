@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Page title -->
+	<title>RapidAPI - Docs</title>
+	<!-- Page description -->
+	<meta name="description" content="">
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon  -->
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+	<!-- Include StyleSheets -->
+
+	<style type="text/css">
+
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+
+
+img {
+  max-width: 100%; 
+}
+
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- <link rel="stylesheet" href="css/custom.css"> -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+	    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="page" id="page-top">
+
+		<!-- Navigation -->
+		<div id="header-include"></div>
+
+
+		<!-- End Page Info -->
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="layout with-left-sidebar">
+							<div class="left-sidebar">
+								<!-- Vertical Menu -->
+								<nav class="js-menu-fixed menu-vertical-wrapper">
+									<ul class="menu-vertical  js-menu-vertical">
+										<li>
+											<a href="#">Getting started</a>
+											<ul>
+												<li>
+													<a href="basics.html">The Basics</a>
+												</li>
+												<li>
+													<a href="databases.html">Databases</a>
+												</li>
+												<li>
+													<a href="realTimeApps.html">Developing real time apps</a>
+												</li>
+												<li>
+													<a href="/docs/recievingTextMessages.html">Incoming SMS Messages</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Integration</a>
+											<ul>
+												<li>
+													<a href="/docs/ios.html">iOS & Swift</a>
+												</li>
+											</ul>
+										</li>
+										<li class="selected">
+											<a href="#">Full Project Tutorials</a>
+											<ul>
+												<li>
+													<a href="#">Music App</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!--<div class="separator"></div>-->
+									<!-- Search -->
+									<!--<div class="search">-->
+										<!--<form action="#">-->
+											<!--<input type="text" class="search-input form-control" placeholder="search">-->
+											<!--<i class="fa fa-search search-icon"></i>-->
+										<!--</form>-->
+									<!--</div>-->
+									<!-- End of Search -->
+									<!-- Tags -->
+									<!--<ul class="tags">-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">html</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">css</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">javascript</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">jquery</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">less</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">sass</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">haml</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">gulp</a>-->
+										<!--</li>-->
+									<!--</ul>-->
+									<!-- End of Tags -->
+								</nav>
+								<!-- End of Vertical Menu -->
+							</div>
+							<div class="main-content with-left-sidebar">
+								<!-- Category Info -->
+								<div class="category-info ">
+									<h3 class="category-title">Building an app with RapidAPI</h3>
+								</div>
+								<!-- End of Caregory Info -->
+								<h1 id="toc_0">Build, Rapidly!</h1>
+
+<p>This tutorial will describe the process of building an app using the RapidAPI system.  RapidAPI&#39;s goal is to help developers create powerful <a href="https://en.wikipedia.org/wiki/Front_and_back_ends">backend systems</a>, with little effort. By the end of the tutorial, you will know how to build and use RapidAPI&#39;s no-code backend system.  Also, you will learn to access it with the <a href="https://en.wikipedia.org/wiki/Front_and_back_ends">frontend</a> of your next website.  </p>
+
+<h2 id="toc_1">Building an App using RapidAPI</h2>
+
+<p><a href="musicality.imrapid.io/login">Musicality</a> is a real time chat app, where individuals can connect to discuss videos and songs with one another. Using just a single type of RapidAPI&#39;s powerful code blocks we were able to make a live video event, where users could talk about their shared experience.  If you&#39;d like to follow along with us, <a href="https://imrapid.co/src/app/#/projects/musicality">here</a> is a link to clone part of the musicality app into your projects folder.</p>
+
+<h2 id="toc_2">Blocks and Endpoints</h2>
+
+<p>Before building a project, let&#39;s first look at the tools used to build backend services with RapidAPI. The basic components of every project are Endpoints.  The functionality you create is stored and accessed through an Endpoint. The functionality of the Endpoint is built with Blocks.  Blocks represent unique actions taken by our servers. A Block&#39;s abilties range from sending emails and texts to Facebook authentication.</p>
+
+<p>Endpoints are URL addresses used to communicate with RapidAPI and retrieve your Block functionality. They come in four main varieties:  <code>GET</code>, <code>PUT</code>, <code>POST</code> and <code>DELETE</code> and have a path chosen by the developer (e.g. <code>/example</code>).  Every endpoint must have a unique combination of request type and name. So, while you may have four different endpoints of the same name, each would then be required to have a different request type.  Likewise, you may have an infinite number of <code>GET</code> requests, provided each has a unique name.</p>
+
+<p>Each type of endpoint is used to signify a different type of action taken by the blocks they represent. Typically, we follow the RESTful architectural style.  This style is explained briefly below, but we encourage you to <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">read further</a></p>
+
+<ul>
+<li><p><strong>POST</strong> - responsible for sending new information to the server (e.g. create a new user / post a new picture).</p></li>
+<li><p><strong>GET</strong> - used for receiving information from the server. (e.g. get a user’s birthday / get recent posts by friends).</p></li>
+<li><p><strong>PUT</strong> - used for updating and modifying information on the server. (e.g. update a users phone number / update events invitees list)</p></li>
+<li><p><strong>DELETE</strong> - used for when deleting information from the server. (e.g. remove a picture / remove a user)</p></li>
+</ul>
+
+<p>Often, Endpoints will require data from the frontend.  We can send this data when making a request to the Endpoint in the request body.  The request body is the part of the request in which we can place some data for the server (it can be left empty when no data needs to be sent). We will discuss briefly how to use JavaScript to send a request with data in the body.</p>
+
+<h1 id="toc_3">Building The App</h1>
+
+<h2 id="toc_4">A Quick Overview</h2>
+
+<p>While the app appears complex, we will only need a single block type, the <code>publish.toRoom</code> block.  When this block recieves a request, it is able to send data to all users within its &quot;room&quot;  this room may be specified in the request body.  Body request parameters are read by RapidAPI in the following manner <code>#body.example</code> where example represents the data sent to RapidAPI.  <a href="/docs/realTimeApps.html">Click here to Find out more about building real-time apps in RapidAPI.</a></p>
+
+<h2 id="toc_5">Start a Project</h2>
+
+<p>To create a new project, simply login, click the new project button and come up with a fun unique name. The new project button is in the top left corner of the home screen. </p>
+
+<h2 id="toc_6">Make Your First Endpoint</h2>
+
+<p>To create your first Endpoint, give it a name and a request type. To build our Musicality app, we will create an Endpoint to provide the chat functionality. We will use the <code>POST</code> request since messages will be sent, or &quot;posted,&quot; to the server. Next, we will give it a name, in this example, <code>/chat</code>. We&#39;ve just successfully set up our first Endpoint.</p>
+
+<p><img src="../img/tutorial/addEndpoint.png" alt="addEndpoint"></p>
+
+<p>The endpoint will appear as follows:
+<img src="../img/tutorial/endpoint.png" alt="endpoint"></p>
+
+<h2 id="toc_7">Adding Our First Block</h2>
+
+<p>Now, we will add our first Block to the Endpoint to give our server functionality.  Click the publish menu on the left and drag the <code>publish.toRoom</code> Block into the center.  In the data section, click the <code>+</code> button and assign a name to the value returned by the server.  Since we are building the chat component, let’s call it <code>message</code>.  Next, we need to define <code>message</code>. To do this, click string, and type <code>#body.message</code>.  This means that any request with message in the request body will be published to the room. Request body data is a special section of data sent to the server when specifically defined by the user. In the JavaScript section of the tutorial we will describe a method of sending body data.</p>
+
+<p>Next, we need to transmit the username of the individual who sent the message. Again, click the <code>+</code> button and type <code>user</code>.  Since user data is a name, it should be a string.  Now define <code>user</code> as <code>#body.user</code>. The Block&#39;s data section is now complete.  Finish up the Block by giving the <code>event</code> field the <code>message</code> label, and set the room name to <code>#body.video</code>.<br>
+<img src="../img/tutorial/data.png" alt="data"></p>
+
+<p>Finally, open the <code>response</code> menu, and drag a <code>response.sendMessage</code> Block into the available space. Write a custom message and the number ‘200’ into the status.  Sending a 200 status indicates that the server procceeded without error.  In general, status codes are ways to indicate to your browser the status of your request.  You may have seen status codes in other situtations usch </p>
+
+<p>You&#39;ve now successfully built your first Endpoint! Using only this Endpoint, we will be able to chat with anyone using your app.  Your Endpoint should appear as follows: <img src="../img/tutorial/chatblock.png" alt="done chat block"></p>
+
+<h2 id="toc_8">One Down, One to Go</h2>
+
+<p>To finish the backend, we need to add one final Endpoint.  This Endpoint will be used to sync the videos across all users in the same room. When creating the new Endpoint, we will again assign it a <code>POST</code>, and give it the name <code>/load</code> as it will sync videos up once users load the page. It will appear as follows: <img src="../img/tutorial/endpoint2.png" alt="endpoint2"> </p>
+
+<p>We will use the <code>publish.toRoom</code> Block and setup a single data entry. Let&#39;s label the entry <code>time</code> as it will represent the time elapsed since the start of the video.  Likewise, it will also accept <code>#body.time</code>.  As we fill in the event name, we must remember to give it a different name than the prior Block. We will fill in the event name as <code>load_event</code>. Next, we must ensure that the load event takes place in the same room as the messaging so it should maintain the prior name of  <code>#body.video</code>.</p>
+
+<p>Finally, add a <code>response.sendMessage</code> block using the method discussed earlier. Your second Endpoint should appears as follows: </p>
+
+<p><img src="../img/tutorial/loadblock.png" alt="load block pic"></p>
+
+<h2 id="toc_9">Done With the Backend, Onto Frontend</h2>
+
+<p>Now that we finished our backend, we must integrate our Endpoints with frontend code. </p>
+
+<h2 id="toc_10">Login Page</h2>
+
+<p>This page handles taking a username, and deciding if a user needs to sync up to a previously started video, or start the video from the beginning.  </p>
+
+<h3 id="toc_11">HTML code for page:</h3>
+
+<p>By hosting frontend code on RapidAPI, we make it possible for your friends and family to see your favorite projects in action.  To do this we need to create static Endpoints. This is as simple as changing the last dropdown menu from <code>block</code> to <code>static</code>.  <img src="../img/tutorial/staticEndpoint.png" alt="endpoint3">  When you open it, you will notice the editor, with a region for CSS, HTML JavaScipt and a preview of your project.  Don&#39;t worry about importing the CSS or JavaScipt into the page, the site does that for us.  If you&#39;ve already cloned our example project you should find the following html and CSS code already there.  Before we are done with the HTML/CSS code, we need to import the necessary libraries.  Click the <code>libraries</code> button and check off, <code>jquery-1.11.1.min.js</code> and <code>socket.js</code>. <code>jquery-1.11.1.min.js</code> lets us use <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> requests, which we will discuss later, and <code>socket.js</code> lets us listen for RapidAPI&#39;s <code>message</code> and <code>load_event</code> events.  We also need to check off the <code>moment.js</code> library, which lets our app make time measurements.  These will be used to sync up the videos on many different computers.</p>
+
+<p><img src="../img/tutorial/libraries.png" alt="libraries"></p>
+
+<p>If you hadn&#39;t cloned the project previously feel free to copy the HTML and CSS below.</p>
+
+<pre><code class="language-none">  &lt;head&gt;
+    &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+   &lt;/head&gt;
+  &lt;body&gt;
+  &lt;h1 id=&quot;title&quot;&gt; listen to music, be true to yourself! &lt;/h1&gt;
+    &lt;div class=&quot;container main&quot;&gt;
+      &lt;form class=&quot;form-signin&quot;&gt;
+        &lt;h2 class=&quot;form-signin-heading&quot;&gt;enter username:&lt;/h2&gt;
+        &lt;input class=&quot;form-control&quot; placeholder=&quot;Jon Snow&quot; autofocus id=&quot;username_input&quot;&gt;
+        &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; type=&quot;button&quot; id=&quot;submit&quot;&gt; Listen Live!&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;/body&gt; </code></pre>
+
+<p>It is easy to see that the code is both short and effective.  Its primary content uses the <code>form</code> class from <a href="http://getbootstrap.com/">Bootstrap</a> to help style the page.  The <code>input</code> tag represents the text input box and the <code>button</code> will call a function in the JavaScipt file to move between windows.</p>
+
+<h3 id="toc_12">CSS for Login page:</h3>
+
+<pre><code class="language-none">body {
+  background: url(&quot;http://c1.staticflickr.com/9/8049/8101927779_d9823eff20_b.jpg&quot;);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.main {
+  margin-top: 15%;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: rgba(99, 101, 107, 0.5);
+  border-radius: 25px;
+
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .input-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .input-control:focus {
+  z-index: 2;
+}
+.form-signin input {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+h2{
+  margin-top: 0px;
+  color: white;
+  text-align: center;
+}
+#title {
+  padding-top:3%;
+  color: white;
+  text-align: center;
+}</code></pre>
+
+<h3 id="toc_13">Integration, JavaScript and Endpoints</h3>
+
+<p>In order to call the Endpoints, we will write an AJAX request to the server. Specifically, we will call upon the <code>/load</code> Endpoint.  The following section of code will make a request a <code>POST</code> request to our <code>/load</code> Endpoint, and pass it the necessary data to form the full request.  In this case, our room(which is called &quot;video&quot;) is named ‘blood’ after the default song, and has a &quot;time&quot; of 0. </p>
+
+<pre><code class="language-none">    $.ajax({
+    type: &quot;POST&quot;,
+    url: &quot;https://musicality.imrapid.io/load&quot;,
+    data: { &quot;video&quot;: &quot;blood&quot;, &quot;time&quot;: 0}
+    });</code></pre>
+
+<p>This will create an event for everyone in the room since the start of the video.  We must be prepared for a response. Therefore, we will set up a new JavaScipt object and create an event listener.  This event listener will use the moment.js library to determine when the video started.</p>
+
+<pre><code class="language-none">var room = createIO(&quot;musicality&quot;, &quot;blood&quot;);
+room.on(&quot;load_event&quot;, function(data) {
+    localStorage.setItem(&quot;time&quot;, data.time);
+    localStorage.setItem(&quot;start&quot;, moment().subtract(data.time, &quot;seconds&quot;));
+});     </code></pre>
+
+<p>These two pieces of code form the core for the rest of JavaScipt used in the login page. All subsequent JavaScipt for the page is used for getting the username and making better user experience.  In sum, the code for the login page looks as follows:</p>
+
+<pre><code class="language-none">&quot;use strict&quot;;
+function navigateToMainContent(name){
+    if (name !== &quot;&quot;){
+        localStorage.setItem(&quot;name&quot;, name);
+        localStorage.setItem(&quot;users&quot;, JSON.stringify([]));
+        var time_since_start = moment().diff(moment(localStorage.getItem(&quot;start&quot;)), &quot;seconds&quot;);
+        localStorage.setItem(&quot;time&quot;, time_since_start);
+        window.location.assign(&quot;index.html&quot;);
+    }}
+var room = createIO(&quot;musicality&quot;, &quot;blood&quot;);
+
+room.on(&quot;load_event&quot;, function(data) {
+    localStorage.setItem(&quot;time&quot;, data.time);
+    localStorage.setItem(&quot;start&quot;, moment().subtract(data.time, &quot;seconds&quot;));
+});
+
+
+$(document).ready(function(){
+
+      document.getElementById(&quot;submit&quot;).onclick = 
+        navigateToMainContent(document.getElementById(&quot;username_input&quot;).value);
+
+    $(document).keypress(function(){
+        if (event.which == 13 || event.keyCode == 13){
+            event.preventDefault();
+            navigateToMainContent(document.getElementById(&quot;username_input&quot;).value);
+        }
+    });
+    $.ajax({
+        type: &quot;POST&quot;,
+        url: &quot;https://musicality.imrapid.io/load&quot;,
+        data: { &quot;video&quot;: &quot;blood&quot;, &quot;time&quot;: 0}
+    });
+});</code></pre>
+
+<h2 id="toc_14">Video page</h2>
+
+<p>This page contains the main YouTube player and is responsible for letting users chat as well as sending the number of seconds elapsed since the start of the video when individuals joined.</p>
+
+<h3 id="toc_15">HTML for Video Page:</h3>
+
+<p>Repeat the same processes used for the login page, although provide the static Endpoint a name <code>/</code>.</p>
+
+<pre><code class="language-none">  &lt;head&gt;
+        &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://www.youtube.com/iframe_api&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;div class=&quot;col-md-3 main&quot;&gt;
+  &lt;div class =&quot;break&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;text-output&quot; id=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-group&quot; style=&quot;padding-top: 8px&quot;&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control input&quot; autofocus id=&quot;input&quot; value=&quot;&quot;&gt;
+              &lt;span class=&quot;input-group-btn&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot; id=&quot;btn&quot;&gt;Go! &lt;/button&gt;
+              &lt;/span&gt;
+        &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;videoFrame&quot;style=&quot;position: absolute; z-index: -99; width: 100%; height: 100%&quot;&gt;
+&lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/body&gt;</code></pre>
+
+<p>Without including the YouTube video frame, we can easily examine the key sections of the HTML code. Again, we make extensive use of Bootstrap&#39;s provided classes.  The <code>input group</code> tag represents the input bar where we write text. While there are two empty divs, each serves a specific purpose. <code>break</code> is used to create a small break in text and <code>text-output</code> serves as the point where we write the text to the page. </p>
+
+<pre><code class="language-none">    &lt;body&gt;
+      &lt;div class=&quot;col-md-3 main&quot;&gt;
+      &lt;div class =&quot;break&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;text-output&quot; id=&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;input-group&quot; style=&quot;padding-top: 8px&quot;&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control input&quot; autofocus id=&quot;input&quot; value=&quot;&quot;&gt;
+                  &lt;span class=&quot;input-group-btn&quot;&gt;
+                    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot; id=&quot;btn&quot;&gt;Go! &lt;/button&gt;
+                  &lt;/span&gt;
+            &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/body&gt;</code></pre>
+
+<h3 id="toc_16">CSS for video page:</h3>
+
+<pre><code class="language-none">.main{
+    position: absolute; 
+    z-index: 100;
+}
+.videoFrame{
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+}
+#input {
+  border: 0;
+  height: 34px;
+  background-color: #8C8C8C;
+}
+
+#btn {
+  border: 0;
+  height: 34px;
+  background-color: #8C8C8C;
+}
+
+.myName {
+    color: white;
+    margin-left: 5%;
+}
+.main {
+    height: 100vh;
+}
+.break {
+    height: 10vh;
+}
+.text-output {
+    height: 80vh;
+    overflow-y: scroll;
+    margin-left: 5%;
+}</code></pre>
+
+<h2 id="toc_17">Integration &amp; Javascript</h2>
+
+<p>The video page to is responsible for chat, and sending elapsed time.  We must therefore set up two Ajax requests, and two event listeners.  The AJAX request will trigger on a <code>load_event</code> event and if event contains a request for time. Once triggered, It will determine the amount of time passed since the start of the video and use the AJAX request to send the data</p>
+
+<pre><code class="language-none">var room = createIO(&quot;musicality&quot;, &quot;blood&quot;);
+
+room.on(&quot;load_event&quot;, function(data) {
+if(data.time === 0){
+    $.ajax({
+            type: &quot;POST&quot;,
+            url: &quot;https://musicality.imrapid.io/load&quot;,
+            data: {
+                &quot;video&quot;: &quot;blood&quot;, 
+                &quot;time&quot;:  moment().diff(moment(localStorage.getItem(&quot;start&quot;)), &quot;seconds&quot;)
+            },
+          });
+} </code></pre>
+
+<p>The second AJAX request will trigger when the user has decided to send a message to the other members of the room.  It will use the <code>/chat</code> Endpoint, unlike the previous AJAX requests which used the <code>/load</code> Endpoint.</p>
+
+<pre><code class="language-none">$(document).keypress(function(){
+    if (event.which == 13 || event.keyCode == 13){
+           $.ajax({
+            type: &quot;POST&quot;,
+            url: &quot;https://musicality.imrapid.io/chat&quot;,
+            data: {
+              &quot;video&quot;: &quot;blood&quot;, 
+              &quot;message&quot;: document.getElementById(&quot;input&quot;).value,
+              &quot;user&quot;: localStorage.getItem(&quot;name&quot;),
+            }
+            });
+          document.getElementById(&quot;input&quot;).value = &quot;&quot;;
+    }
+});</code></pre>
+
+<p>The final event listener will, on a <code>message</code> event write the text sent through the post requests to the screen.</p>
+
+<pre><code class="language-none">room.on(&quot;message&quot;, function(data) {
+  writeText(data.user, data.message, localStorage.getItem(&quot;name&quot;));
+  document.getElementById(&quot;text&quot;).scrollTop = 9999999;
+});
+
+function writeText(user, message, myName){
+    if(user == myName)
+        $(&quot;.text-output&quot;).append(&quot;&lt;h3 class=&#39;myName&#39;&gt; &quot;+ user + &quot; : &quot; + message + &quot; &lt;/h3&gt;&quot;);
+    else 
+       $(&quot;.text-output&quot;).append(&quot;&lt;h3 style=&#39;color: #659EC7&#39;&gt;&quot;+ user + &quot; : &quot; + message + &quot; &lt;/h3&gt;&quot;);  
+}   </code></pre>
+
+<p>In addition to the code previously shown, we must include the JavaScipt necessary to access the YouTube API. The complete code, for both the YouTube API as well as the code previously examined is shown below:</p>
+
+<pre><code class="language-none">    $(document).keypress(function(){
+    if (event.which == 13 || event.keyCode == 13){
+           $.ajax({
+            type: &quot;POST&quot;,
+            url: &quot;https://musicality.imrapid.io/chat&quot;,
+            data: {
+              &quot;video&quot;: &quot;blood&quot;, 
+              &quot;message&quot;: document.getElementById(&quot;input&quot;).value,
+              &quot;user&quot;: localStorage.getItem(&quot;name&quot;),
+            }
+            });
+          document.getElementById(&quot;input&quot;).value = &quot;&quot;;
+    }
+});
+
+var room = createIO(&quot;musicality&quot;, &quot;blood&quot;);
+
+room.on(&quot;message&quot;, function(data) {
+  writeText(data.user, data.message, localStorage.getItem(&quot;name&quot;));
+  document.getElementById(&quot;text&quot;).scrollTop = 9999999;
+});
+
+function writeText(user, message, myName){
+    if(user == myName)
+        $(&quot;.text-output&quot;).append(&quot;&lt;h3 class=&#39;myName&#39;&gt; &quot;+ user + &quot; : &quot; + message + &quot; &lt;/h3&gt;&quot;);
+    else 
+       $(&quot;.text-output&quot;).append(&quot;&lt;h3 style=&#39;color: #659EC7&#39;&gt;&quot;+ user + &quot; : &quot; + message + &quot; &lt;/h3&gt;&quot;);  
+}
+
+var tag = document.createElement(&quot;player&quot;);
+tag.src = &quot;https://www.youtube.com/iframe_api&quot;;
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player(&quot;player&quot;, {
+    height: &quot;100%&quot;,
+    width: &quot;100%&quot;,
+    videoId: &quot;KMe_5O0mYj0&quot;,
+    playerVars:{
+      &quot;controls&quot;: 0,
+      &quot;showInfo&quot;: 0,
+      &quot;autoHide&quot;: 0,
+      &quot;start&quot; : parseInt(localStorage.getItem(&quot;time&quot;)),
+      &quot;iv_load_policy&quot;: 3
+    },
+    events: {
+      &quot;onReady&quot;: onPlayerReady,
+    }
+  });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+room.on(&quot;load_event&quot;, function(data) {
+    if(data.time === 0){
+        $.ajax({
+                type: &quot;POST&quot;,
+                url: &quot;https://musicality.imrapid.io/load&quot;,
+                data: {
+                    &quot;video&quot;: &quot;blood&quot;, 
+                    &quot;time&quot;:  moment().diff(moment(localStorage.getItem(&quot;start&quot;)), &quot;seconds&quot;)
+                },
+              });
+    } 
+});</code></pre>
+
+<h2 id="toc_18">Looking Foward</h2>
+
+<p>Individuals looking to expand musicality may do so in a number of ways, and the full source code is provided on <a href="https://github.com/barca/musicality">github</a> under the MIT License.</p>
+
+<h3 id="toc_19">possible project modifications:</h3>
+
+<p>-coustom video selection by user</p>
+
+<p>-allow users to create private rooms</p>
+
+<p>-use texts to invite people to your favorite room</p>
+								<!-- Navigation -->
+								<!--<ul class="navigation">-->
+									<!--<li class="navigation-previous">-->
+										<!--<a href="#">Previous article</a>-->
+									<!--</li>-->
+									<!--<li class="navigation-next">-->
+										<!--<a href="#">Next article</a>-->
+									<!--</li>-->
+								<!--</ul>-->
+								<!-- End of Navigation -->
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-include"></div>
+	</div>
+	<script src="js/all.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script>
+		$(function(){
+			$("#footer-include").load("footer.html");
+			$("#header-include").load("header.html");
+			$("#left-sidebar-include").load("left-sidebar.html");
+		});
+	</script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!-- 
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+     -->
+</body>
+
+</html>

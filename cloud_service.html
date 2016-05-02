@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=0, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="description"
+          content="With RapidAPI, you can instantly make your apps more awesome, with no extra effort. You can create a rich back end for your app, with real-time data and notifications and 3rd party APIs integration to give your users the best experience possible">
+
+    <meta name="google-site-verification" content="sQUzezp-cjolniR4xrDvCLJyS9dhYWKQReVeHbzYAvQ" />
+
+    <link rel="icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+
+    <title>RapidAPI - Build your backend fast.</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/prism/prism.css" rel="stylesheet">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="plugins/swipebox/css/swipebox.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta content='en_US' property='og:locale'/>
+    <meta content='939723086062014' property='fb:app_id'/>
+    <meta content='RapidAPI' property='og:site_name'/>
+    <meta content='https://www.facebook.com/Rapid-API-860822767286196/' property='article:publisher'/>
+    <meta content='rapidapi.com' name='twitter:domain'/>
+    <meta content='photo' name='twitter:card'/>
+    <meta content='@rapid_api' name='twitter:site'/>
+    <meta content='website' property='og:type'/>
+    <meta content='https://rapidapi.com/' property='og:url'/>
+    <meta content='RapidAPI - Build your backend fast.' property='og:title'/>
+    <meta content='Don’t waste your time writing backend code. Drag and Drop the actions you need.  Do Anything from saving data to payment processing.' property='og:description'/>
+    <meta property="og:image" content="https://rapidapi.com/img/og_image.png" />
+
+    <script type="text/javascript">
+    adroll_adv_id = "GDN2GOU5IBHGTCX5245OHN";
+adroll_pix_id = "AHWTVDAX6NFMTF7EYOP4TD";
+(function () {
+    var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+            document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+    };
+    if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+    else {window.attachEvent('onload', _onload)}
+}());
+    </script>
+
+    <script type="text/javascript">var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : [];
+    (function () {
+        function b() {
+            if (void 0 == document.getElementById("__mstrkscpt")) {
+                var a = document.createElement("script");
+                a.type = "text/javascript";
+                a.id = "__mstrkscpt";
+                a.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www2") + ".mousestats.com/js/5/2/5266017506008941246.js?" + Math.floor((new Date).getTime() / 6E5);
+                a.async = !0;
+                a.defer = !0;
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a)
+            }
+        }
+
+        window.attachEvent ? window.attachEvent("onload", b) : window.addEventListener("load", b, !1);
+        "complete" === document.readyState && b()
+    })();
+    </script>
+    <script>
+ window.intercomSettings = {
+   app_id: "t4z5ote7"
+ };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/t4z5ote7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+<script>
+(function(e,t){if(!t.__SV){window.Kilometer=t;var n=e.createElement("script");n.type="text/javascript";
+n.src="http"+("https:"===e.location.protocol?"s":"")+'://static.kilometer.io/events-api-client.js';n.async=!0;
+var r=e.getElementsByTagName("script")[0];r.parentNode.insertBefore(n,r);t.init=function(k,u)
+{t.app_id=k||null;t.user_id=u||null;t._execQueue=[];
+m="transmitEvent identify addUser setUserProperties increaseUserProperty decreaseUserProperty"
+.split(" ");for(var n=0;n<m.length;n++)
+{var f=function(){var r=m[n];var s=function(){t._execQueue.push({m:r,args:arguments})};
+var i=r.split(".");if(i.length==2){if(!t[i[0]]){t[i[0]]=[]}t[i[0]][i[1]]=s}else{t[r]=s}}();}};
+t.__SV=1}})(document,window.Kilometer||[]);
+Kilometer.init("c7de5488-9fa8-4176-91dd-28f438a519eb");
+Kilometer.transmitEvent("visit_website", {title: document.title, url: document.URL});
+</script>
+<script type="text/javascript">
+(function(e, t) {
+    function r(e, t) {
+        e[t] = function() {
+            e.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));
+        };
+    }
+    var n = "JacoRecorder";
+    (function(e, t, i, s) {
+        if (!i.__VERSION) {
+            e[n] = i;
+            var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo" ];
+            for (var u = 0; u < o.length; u++) r(i, o[u]);
+            i.__VERSION = .9, i.__INIT_TIME = 1 * new Date;
+            var a = t.createElement("script");
+            a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = s;
+            var f = t.getElementsByTagName("head")[0];
+            f.appendChild(a);
+        }
+    })(e, t, e[n] || [], "//recorder-assets.getjaco.com/recorder.js");
+}).call(window, window, document), window.JacoRecorder.push([ "init", "15443917-d5d6-47b3-a7d6-e0d2c6ed1d6c", {} ]);
+</script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="load()">
+
+<div id="nav-include"></div>
+
+<section id="pageHeader" class="content-section text-center">
+  <div class="container">
+    <div class="pageHeaderTitle">
+        <div class="pageHeaderIcon"><img src="{{api.icon}}"/></div>
+        <h1>{{api.title}}</h1>
+        <div class="pageHeaderSecondaryTitle">Created by <a href="">{{api.creator}}</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+    <div class="container">
+        
+        <div id="pageLeftSide" class="content-section">
+            <h5><i class="fa fa-code"></i> Description:</h5>
+            <p> {{api.desc}}
+            </p>
+            <!--
+            <h5><i class="fa fa-flag-o"></i> Cloud Services:</h5>
+            <ul class="paragraphList">
+                <li>Send SMS (<a href="#">delivery.sendSMS</a>): Allows you to send SMS to a specific phone number.</li>
+                <li>Send SMS From Specific Number (<a href="#">deliver.sendSMSFrom</a>): Allows you to send SMS to a specific phone number</li>
+                <li>Send SMS From Specific Number (<a href="#">deliver.sendSMSRendered</a>)</li>
+            </ul>
+            <h5><i class="fa fa-flag-o"></i> API's Used:</h5>
+            <ul class="paragraphList">
+                <li>Ebay API</li>
+                <li>PubNub API</li>
+                <li>Facebook API</li>
+            </ul>
+            <h5><i class="fa fa-flag-o"></i> Public Cloud Services Developed:</h5>
+            <ul class="paragraphList">
+                <li>NASA.getRocketID</li>
+                <li>USA.govM.Get.GEO</li>
+                <li>Facebook.MSQRD.face.Create</li>
+            </ul>
+            <h5><i class="fa fa-flag-o"></i> Screenshots:</h5>
+            <ul class="screenShots">
+                <li><a href="http://blog.shareaholic.com/wp-content/uploads/2012/05/Facebook-2009-Screenshot.jpg" class="swipebox" title="RapidAPI"><img src="http://blog.shareaholic.com/wp-content/uploads/2012/05/Facebook-2009-Screenshot.jpg"/></a></li>
+                <li><a href="http://blog.shareaholic.com/wp-content/uploads/2012/05/Facebook-2009-Screenshot.jpg" class="swipebox" title="RapidAPI"><img src="http://blog.shareaholic.com/wp-content/uploads/2012/05/Facebook-2009-Screenshot.jpg"/></a></li>
+            </ul>
+            <h5><i class="fa fa-flag-o"></i> How To:</h5>
+            <div class="howToImage">
+                <a href="https://wwelvaert.files.wordpress.com/2011/04/screenshot.png" class="swipebox" title="RapidAPI"><img src="https://wwelvaert.files.wordpress.com/2011/04/screenshot.png"/></a>
+            </div>
+            <h5><i class="fa fa-flag-o"></i> Code Example:</h5>
+            <div class="codeExample">
+                <div class="codeExampleNav">
+                Choose Platform: <a href="#" class="active">Jquery</a> | <a href="#">Swift</a> | <a href="#">Phyton</a> | <a href="#">Java</a>
+                </div>
+
+                <div class="codeSnippet"><code class="language-css">$(“#lp - pom - button - 45”).click(function() {
+// The $ that is mentioned above is the id of the 
+// Button that is calling the function on Unbounce
+jQuery.ajax({
+        url: “https: //expensive-ocelot-7j81.rapidapi.io/sms",
+            // This url is the access to your endpoint on RapidAPI
+            type: “POST”,
+        contentType: “application / x - www - form - urlencoded”,
+        data: {“
+            phone”: $(“#phone”).val(),
+            “email”: $(“#email”).val(),
+            “name”: $(“#name”).val(),
+            “company”: $(“#company”).val()
+                // These are the parameters you’ve used on Unbounce 
+                // And on RapidAPI to send it through SMS
+        }
+    })
+    .done(function(data, textStatus, jqXHR) {
+        console.log(“HTTP Request Succeeded: “+jqXHR.status);
+        console.log(data);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.log(“HTTP Request Failed”);
+    })
+    .always(function() {});
+});
+});
+                </code></div>
+            </div>-->
+            <h5><i class="fa fa-flag-o"></i> Support:</h5>
+            <p>
+                Got some questions? Go to our <a href="#">Support Channel</a> or use Intercom to reach someone 1:1
+            </p>
+        </div>
+
+        <div id="pageRightSide">
+            <div class="pageRightSideTitle">Start using this block</div>
+            <a href="https://github.com/orgs/RapidSoftwareSolutions/dashboard" class="btn-link"><button class="pageRightSideButton"><img src="img/iconSmall1.png"/> View Source</button></a>
+            <a href="http://rapidsoftwaresolutions.github.io/documentation/" class="btn-link"><button class="pageRightSideButton orange"><img src="img/iconSmall2.png"/> View documentation</button></a>
+            <hr>
+            <ul class="pageRightSideDetails">
+                <li><img src="img/rapidicon.png"/></li>
+                <li>Created By:</li>
+                <li><a href="#">{{api.creator}}</a></li>
+            </ul>
+            <hr>
+            <ul class="pageRightSideDetails">
+                <li><img src="img/rapidicon.png"/></li>
+                <li># Of Clones:</li>
+                <li><a href="#">{{api.installs}}</a></li>
+            </ul>
+            <hr>
+            <div class="pageRightSideLinkDetail"><a href="http://rapidsoftwaresolutions.github.io/documentation/">http://rapidsoftwaresolutions.github.io/documentation/</a></div>
+            <hr>
+            <!--<div class="pageRightSideTitle">Templates includes Ionic</div>
+            <div class="pageRightSideTemplate">
+                <div class="pageRightSideTemplateIcon"></div>
+                <div class="pageRightSideTemplateTitle">Apple Watch Notes App</div>
+                <div class="pageRightSideTemplateText">A full photo editing app with an integrated backend by <a href="#">IddoGino</a></div>
+            </div>
+            <hr>
+            <div class="pageRightSideTitle">About BarSaraf</div>
+            <div class="userAboutStats">
+                <div class="userAboutStat">
+                    <div>500</div>
+                    <div>Followers</div>
+                </div>
+                <div class="userAboutStat">
+                    <div>3</div>
+                    <div>Cloud Services</div>
+                </div>
+                <div class="userAboutStat">
+                    <div>15</div>
+                    <div>Following</div>
+                </div>
+            </div>
+            <hr>
+            <button class="pageRightSideButton"><img src="img/iconSmall2.png"/> Follow BarSaraf</button>
+            <hr>
+            <div class="pageRightSideLinkDetail"><a href="https://github.com/nethunter">https://github.com/nethunter</a></div>-->
+        </div>
+    </div>
+</section>
+
+<div id="footer-include"></div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 col-sm-6">
+                    <strong>Location</strong><br>
+                    Arie Shenkar 1,<br>
+                    WeWork building,<br>
+                    Herzelia Pituach,<br>
+                    Israel<br>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <strong>JOIN US</strong><br>
+                    We are always looking for awesome people to join us! Like what we are doing and think you can make
+                    it better? Contact Us.
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+                <form action="/api/contactUs" id="contacts" method="post">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Full name:</span>
+                            <input type="text" name="fullname" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Email address:</span>
+                            <input type="text" name="email" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 15px;">
+                        <div class="input-group" style="width: 100%">
+                            <span>Message:</span>
+                            <textarea class="form-control" name="message"
+                                      placeholder="Don't forget that kindness is all!"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Send"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addYourApi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add Your API</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 col-sm-6">
+                    <strong>How it works?</strong><br>
+                    - Arie Shenkar 1<br>
+                    - WeWork building<br>
+                    - Herzelia Pituach<br>
+                    - Get $100!<br>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <strong>What you'll get?</strong><br>
+                    We are always looking for awesome people to join us! Like what we are doing and think you can make
+                    it better? Contact Us.
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+                <form action="/api/contactUs" id="contacts" method="post">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Full name:</span>
+                            <input type="text" name="fullname" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Email address:</span>
+                            <input type="text" name="email" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 15px;">
+                        <div class="input-group" style="width: 100%">
+                            <span>API Description:</span>
+                            <textarea class="form-control" name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Send"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+
+<script>
+    $(function () {
+        $("#footer-include").load("footer.html");
+        $("#nav-include").load("nav.html");
+    });
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/grayscale.js"></script>
+<script src="plugins/prism/prism.js"></script>
+<script src="plugins/swipebox/js/jquery.swipebox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="plugins/jquery.nicescroll.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.swipebox-video').swipebox();
+
+        $("#contacts").submit(function (e) {
+            e.preventDefault();
+            var actionurl = e.currentTarget.action;
+            $.ajax({
+                url: actionurl,
+                type: 'post',
+                data: $("#contacts").serialize(),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                success: function (data) {
+                    alert("Sent!");
+                }
+            });
+
+        });
+
+    });
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72666335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+<script src="index-script.js"></script>
+</body>
+
+</html>

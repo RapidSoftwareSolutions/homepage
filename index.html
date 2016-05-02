@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=0, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="description"
+          content="RapidAPI lets you develop you backend by using blocks created by our community."/>
+    <meta name="keywords" content="backend, development, ios, android, code, app, web, hosting, baas, blocks, open source, docker"/>
+
+    <meta name="google-site-verification" content="sQUzezp-cjolniR4xrDvCLJyS9dhYWKQReVeHbzYAvQ"/>
+
+    <link rel="icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+
+    <title>RapidAPI - Build your backend faster</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="plugins/swipebox/css/swipebox.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta content='en_US' property='og:locale'/>
+    <meta content='939723086062014' property='fb:app_id'/>
+    <meta content='RapidAPI' property='og:site_name'/>
+    <meta content='https://www.facebook.com/Rapid-API-860822767286196/' property='article:publisher'/>
+    <meta content='rapidapi.com' name='twitter:domain'/>
+    <meta content='photo' name='twitter:card'/>
+    <meta content='@rapid_api' name='twitter:site'/>
+    <meta content='website' property='og:type'/>
+    <meta content='https://rapidapi.com/' property='og:url'/>
+    <meta content='RapidAPI - Build your backend fast.' property='og:title'/>
+    <meta content='Don’t waste your time writing backend code. Drag and Drop the actions you need.  Do Anything from saving data to payment processing.'
+          property='og:description'/>
+    <meta property="og:image" content="https://rapidapi.com/img/og_image.png"/>
+
+    <script type="text/javascript">
+        adroll_adv_id = "GDN2GOU5IBHGTCX5245OHN";
+        adroll_pix_id = "AHWTVDAX6NFMTF7EYOP4TD";
+        (function () {
+            var _onload = function () {
+                if (document.readyState && !/loaded|complete/.test(document.readyState)) {
+                    setTimeout(_onload, 10);
+                    return
+                }
+                if (!window.__adroll_loaded) {
+                    __adroll_loaded = true;
+                    setTimeout(_onload, 50);
+                    return
+                }
+                var scr = document.createElement("script");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                scr.setAttribute('async', 'true');
+                scr.type = "text/javascript";
+                scr.src = host + "/j/roundtrip.js";
+                ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+            };
+            if (window.addEventListener) {
+                window.addEventListener('load', _onload, false);
+            }
+            else {
+                window.attachEvent('onload', _onload)
+            }
+        }());
+    </script>
+
+    <script type="text/javascript">var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : [];
+    (function () {
+        function b() {
+            if (void 0 == document.getElementById("__mstrkscpt")) {
+                var a = document.createElement("script");
+                a.type = "text/javascript";
+                a.id = "__mstrkscpt";
+                a.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www2") + ".mousestats.com/js/5/2/5266017506008941246.js?" + Math.floor((new Date).getTime() / 6E5);
+                a.async = !0;
+                a.defer = !0;
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a)
+            }
+        }
+
+        window.attachEvent ? window.attachEvent("onload", b) : window.addEventListener("load", b, !1);
+        "complete" === document.readyState && b()
+    })();
+    </script>
+    <script>
+        window.intercomSettings = {
+            app_id: "t4z5ote7"
+        };
+    </script>
+    <script>(function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+            ic('reattach_activator');
+            ic('update', intercomSettings);
+        } else {
+            var d = document;
+            var i = function () {
+                i.c(arguments)
+            };
+            i.q = [];
+            i.c = function (args) {
+                i.q.push(args)
+            };
+            w.Intercom = i;
+            function l() {
+                var s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.intercom.io/widget/t4z5ote7';
+                var x = d.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+
+            if (w.attachEvent) {
+                w.attachEvent('onload', l);
+            } else {
+                w.addEventListener('load', l, false);
+            }
+        }
+    })()</script>
+
+    <script type="text/javascript">
+        (function (e, t) {
+            function r(e, t) {
+                e[t] = function () {
+                    e.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+                };
+            }
+
+            var n = "JacoRecorder";
+            (function (e, t, i, s) {
+                if (!i.__VERSION) {
+                    e[n] = i;
+                    var o = ["init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo"];
+                    for (var u = 0; u < o.length; u++) r(i, o[u]);
+                    i.__VERSION = .9, i.__INIT_TIME = 1 * new Date;
+                    var a = t.createElement("script");
+                    a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = s;
+                    var f = t.getElementsByTagName("head")[0];
+                    f.appendChild(a);
+                }
+            })(e, t, e[n] || [], "//recorder-assets.getjaco.com/recorder.js");
+        }).call(window, window, document), window.JacoRecorder.push(["init", "15443917-d5d6-47b3-a7d6-e0d2c6ed1d6c", {}]);
+    </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<div id="nav-include"></div>
+
+<header class="intro" id="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 introLeftContentSignin">
+                    <h1 class="brand-heading">Build your backend Fast</h1>
+                    <p class="intro-text hidden-low-res">Rapid API let's you build cloud actions by combining blocks.
+                        You can find blocks in our marketplace.</p>
+
+                    <hr>
+
+                    <ul class="introBullets">
+                        <li>Integrate with popular web services (APIs)</li>
+                        <li>Embed in your app (iOS, Android, Web and more)</li>
+                        <li>Share functions you've made</li>
+                    </ul>
+
+                    <div class="col-centered">
+                        <input type="text" class="introInput" id="email" name="email" placeholder="Email"/>
+                        <input type="password" class="introInput" id="password" name="password" placeholder="Password"/>
+
+                        <a href="https://rapidapi.com/dashboard">
+                            <button type="button" class="btn btn-lg introinputsBtn">1-Click Sign Up
+                            </button>
+                        </a>
+
+                        <a class="page-scroll hidden-low-res" href="#howitworks">
+                            <button type="button" class="btn btn-lg introinputsBtn introinputsBtnFacebook">Login With
+                                Facebook
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="introTermsLine">By signing up, you agree to the <a href="#" target="_blank">Terms of
+                        Service</a></div>
+                </div>
+
+                <div class="col-md-7 introRightGif">
+                    <div class="row hidden-low-res">
+                        <div class="col-md-4 col-sm-4"><h3><span class="glyphicon glyphicon-th-large"
+                                                                 aria-hidden="true"></span><br class="hidden-lg"/> 1006
+                        </h3>blocs
+                        </div>
+                        <div class="col-md-4 col-sm-4"><h3><span class="glyphicon glyphicon-time"
+                                                                 aria-hidden="true"></span><br class="hidden-lg"/>
+                            17,518,000</h3>api calls last week
+                        </div>
+                        <div class="col-md-4 col-sm-4"><h3><span class="glyphicon glyphicon-road"
+                                                                 aria-hidden="true"></span><br class="hidden-lg"/>
+                            34,941,582</h3>api calls last month
+                        </div>
+                    </div>
+                    <div id="videoContainer">
+                        <iframe class="hidden-low-res" width="560" height="315"
+                                src="https://www.youtube.com/embed/G1ZCH_l_yyA" frameborder="0"
+                                allowfullscreen></iframe>
+                        <iframe class="col-centered show-low-res" width="300" height="150"
+                                src="https://www.youtube.com/embed/G1ZCH_l_yyA" frameborder="0"
+                                allowfullscreen></iframe>
+                        <!--<div class="intro-body-video">
+                            <div class="intro-body-gif">
+                                <img src="img/home_4.gif" class="" />
+                            </div>
+                            
+                        </div>-->
+                    </div>
+
+                    <div class="introGifBottomText"><a class="swipebox-video" rel="youtube"
+                                                       href="http://www.youtube.com/watch?v=KhkFmHeckeI">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollDownArrow"><a class="page-scroll" href="#cloud_services"><img src="img/introScrollDown.png"/></a>
+    </div>
+</header>
+
+<section id="cloud_services">
+    <div class="container content-section text-center">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 id="t_service_feature">There's a block for <span id="service_feature"><span
+                        id="service_feature_inner"></span></span></h2>
+                <div class="col-xs-12">
+                    <div class="searchServicesInput">
+                        <div class="searchServicesIcon"></div>
+                        <input v-model="apiSearch" type="text" id="searchServicesInputValue"
+                               name="searchServicesInputValue" placeholder="Example: Facebook Login"></input>
+                    </div>
+
+                    <div class="cloundService col-xs-6 col-lg-3" v-for="api in apis | filterBy apiSearch">
+                        <div class="icon">
+                            <a href="/cloud_service.html?api={{api.title}}"><img src="{{api.icon}}"></a>
+                        </div>
+                        <div class="info">
+                            <a href="/cloud_service.html?api={{api.title}}"><h4>{{api.title}}</h4></a>
+                            <div class="endpointPackage">{{api.desc}}</div>
+                            <div class="blockCreator">Created by <a href="#">{{api.creator}}</a></div>
+                        </div>
+                    </div>
+                    <div class="cloundService col-xs-6 col-lg-3">
+                        <a href="#addYourApi" data-toggle="modal" data-target="#addYourApi">
+                            <div class="icon">
+                                <img src="img/services_icons/your.png">
+                            </div>
+                            <div class="info">
+                                <h4>Add Your API</h4>
+                                <div class="endpointPackage">Your API Here Rapidly</div>
+                                <div class="blockCreator">Created by <a href="#">You</a></div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="howitworks" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h2>3 SIMPLE STEPS, <strong>FULL BACKEND</strong></h2>
+            <div class="howitworksStep col-sm-4 col-xs-12 col-lg-4">
+                <div class="title">
+                    <strong>1.</strong> Choose your blocks
+                </div>
+                <div class="picture">
+                    <img src="img/thebigpicture4.jpg"/>
+                </div>
+                <div class="details hidden">
+                    From saving to a database to charging a credit card, we have all the actions your app needs.
+                </div>
+                <button class="action btn btn-info btn-sm"
+                        onmousedown="$(this).prev().filter('div.details').toggleClass('hidden');if ($(this).text() == 'read more') {$(this).text('hide');} else {$(this).text('read more');}">
+                    read more
+                </button>
+            </div>
+            <div class="howitworksStep col-sm-4 col-xs-12 col-lg-4">
+                <div class="title">
+                    <strong>2.</strong> Build your logic
+                </div>
+                <div class="picture">
+                    <img src="img/thebigpicture5.jpg"/>
+                </div>
+                <div class="details hidden">
+                    Use multiple actions to construct the logic of your App. Want to find all the users in a channel and
+                    then send them a text message? No problem.
+                </div>
+                <button class="action btn btn-info btn-sm"
+                        onmousedown="$(this).prev().filter('div.details').toggleClass('hidden');if ($(this).text() == 'read more') {$(this).text('hide');} else {$(this).text('read more');}">
+                    read more
+                </button>
+            </div>
+            <div class="howitworksStep col-sm-4 col-xs-12 col-lg-4">
+                <div class="title">
+                    <strong>3.</strong> Connect to your app
+                </div>
+                <div class="picture">
+                    <img src="img/thebigpicture2.jpg"/>
+                </div>
+                <div class="details hidden">
+                    Once your backend is done just copy a short code snippet to connect it to your app. No SDKs or
+                    Libraries required.
+                </div>
+                <button class="action btn btn-info btn-sm"
+                        onmousedown="$(this).prev().filter('div.details').toggleClass('hidden');if ($(this).text() == 'read more') {$(this).text('hide');} else {$(this).text('read more');}">
+                    read more
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="start-now" class="text-center gray-section">
+    <div class="main-action">
+        <div class="container">
+            <!--<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                <h2 class="wow fadeIn"><b>START NOW</b> AND CREATE AMAZING APPS, WEBSITES and GAMES.</h2>
+                <a href="https://rapidapi.com/dashboard">
+                    <button type="button" class="btn btn-danger btn-lg click-to-action wow fadeInRight"
+                            data-wow-delay="0.8s">SIGNUP FOR FREE
+                    </button>
+                </a>
+            </div>-->
+            <div class="col-xs-12 col-lg-4">
+                <h2>Full tutorials</h2>
+                <p>Use our <a href="http://rapidsoftwaresolutions.github.io/documentation/#getting-started">quick
+                    start</a> tutorial to quickly understand how RapidAPI works. You can also <a
+                        href="https://scotch.io/tutorials/build-your-next-web-app-10x-faster-with-rapidapi">build a todo
+                    list with RapidAPI</a>.</p>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <h2>Documentation</h2>
+                <p>Use our <a href="http://rapidsoftwaresolutions.github.io/documentation/">documentation site</a> to
+                    learn more about RapidAPI, blocks and integrations.</p>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <h2>Videos</h2>
+                <p>Have a look at <a href="https://www.youtube.com/watch?v=nNxUiFFQJLk">this</a> video to get started,
+                    or check out <a href="https://www.youtube.com/watch?v=JvAeNyL7JcQ">this</a> video to send an SMS
+                    with RapidAPI in under a minute!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pricingTable" class="pricingTableFrontPage">
+    <div class="container content-section">
+        <div class="row">
+            <h2>Manage your subscriptions</h2>
+            <div class='wrapper'>
+                <div class='package brilliant'>
+                    <div class="packageTitle">FREE</div>
+                    <div class='desc'>Manage your subscriptions your subscriptions.</div>
+                    <div class="pricePerMonth">
+                        <div class='dollar'>$</div>
+                        <div class='cost'>0</div>
+                        <div class='month'>/MONTH</div>
+                    </div>
+                    <div class='trial'>trial</div>
+                    <hr>
+                    <ul>
+                        <li>
+                            <strong>1</strong>
+                            databases
+                        </li>
+                        <li>
+                            <strong>10</strong>
+                            endpoints
+                        </li>
+                        <li>
+                            <strong>1</strong>
+                            phone numbers
+                        </li>
+
+                        <li class="moreDetails moreDetailsFirst">
+                            <strong>1,000</strong>
+                            API calls
+                        </li>
+                        <li class="moreDetails">
+                            <strong>1,000</strong>
+                            emails
+                        </li>
+                        <li class="moreDetails">
+                            <strong>1,000</strong>
+                            push notifiacations
+                        </li>
+                        <li class="moreDetails">
+                            <strong>1,000</strong>
+                            text messages
+                        </li>
+                    </ul>
+                    <a href="https://rapidapi.com/dashboard">
+                        <button type="button" class="btn btn-danger btn-lg click-to-action wow fadeInRight"
+                                data-wow-delay="0.8s" style="margin-top:20px;">Get Started
+                        </button>
+                    </a>
+                </div>
+                <div class='package'>
+                    <div class="packageTitle">Advanced Plan</div>
+                    <div class='desc'>Manage your subscriptions your subscriptions.</div>
+                    <div class="pricePerMonth">
+                        <div class='dollar'>$</div>
+                        <div class='cost'>99</div>
+                        <div class='month'>/MONTH</div>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li>
+                            <strong>2</strong>
+                            databases
+                        </li>
+                        <li>
+                            <strong>20</strong>
+                            endpoints
+                        </li>
+                        <li>
+                            <strong>1</strong>
+                            phone numbers
+                        </li>
+
+                        <li class="moreDetails moreDetailsFirst">
+                            <strong>25,000</strong>
+                            API calls
+                        </li>
+                        <li class="moreDetails">
+                            <strong>1,000</strong>
+                            emails
+                        </li>
+                        <li class="moreDetails">
+                            <strong>10,000</strong>
+                            push notifiacations
+                        </li>
+                        <li class="moreDetails">
+                            <strong>1,000</strong>
+                            text messages
+                        </li>
+                    </ul>
+                </div>
+                <div class='package'>
+                    <div class="packageTitle">Enterprise</div>
+                    <div class='desc'>Manage your subscriptions your subscriptions.</div>
+                    <div class="pricePerMonth">
+                        <div class='dollar'>$</div>
+                        <div class='cost'>X</div>
+                        <div class='month'>/MONTH</div>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li>
+                            <strong>5</strong>
+                            databases
+                        </li>
+                        <li>
+                            <strong>100,000</strong>
+                            endpoints
+                        </li>
+                        <li>
+                            <strong>10</strong>
+                            phone numbers
+                        </li>
+
+                        <li class="moreDetails moreDetailsFirst">
+                            <strong>150,000</strong>
+                            API calls
+                        </li>
+                        <li class="moreDetails">
+                            <strong>25,000</strong>
+                            emails
+                        </li>
+                        <li class="moreDetails">
+                            <strong>50,000</strong>
+                            push notifiacations
+                        </li>
+                        <li class="moreDetails">
+                            <strong>25,000</strong>
+                            text messages
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-12 text-center">
+                <a href="#contactModal" class="pricingCustom" data-toggle="modal" data-target="#contactModal">Need more?
+                    contact us for <u>CUSTOM PLAN</u></a>
+                <div class="pricingUpgradeDetails">You can upgrade after you create your first project. <a
+                        href="https://rapidapi.com/dashboard">sign up for free</a>.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- <section id="questions" class="content-section text-center gray-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>FAQ</h2>
+                    <div class="question col-xs-12">
+                        <div class="icon">
+                            <span>1</span>
+                        </div>
+                        <div class="info">
+                            <h4>What If I already have exist backend?</h4>
+                            <p>RapidAPI can easily connect to existing backends. Feel free to send us an email to tell us about your existing backend - and what you need from RapidAPI. We will help you integrate it.</p>
+                        </div>
+                    </div>
+                    <div class="question col-xs-12">
+                        <div class="icon">
+                            <span>2</span>
+                        </div>
+                        <div class="info">
+                            <h4>What if I just want a few features?</h4>
+                            <p>RapidAPI supports many different features and APIs. You can do basic data storage, Send push notifications, emails and text messages. Connect to social APIs like Facebook, Google, Twitter and LinkedIn. Process payments with Stripe and PayPal. Send push notifications to iOS and Android.</p>
+                        </div>
+                    </div>
+                    <div class="question col-xs-12">
+                        <div class="icon">
+                            <span>3</span>
+                        </div>
+                        <div class="info">
+                            <h4>Do I need to learn a complex new programming language?</h4>
+                            <p>Not at all. RapidAPI uses visual blocks to create the backend. Thus, you can create any actions you need without writing a single line of code. You can see how it works by clicking <a href="https://www.youtube.com/watch?v=nNxUiFFQJLk" target="_blank">here</a>.</p>
+                        </div>
+                    </div>
+                    <div class="question col-xs-12 hidden-low-res">
+                        <div class="icon">
+                            <span>4</span>
+                        </div>
+                        <div class="info">
+                            <h4>Can I migrate my app from Parse?</h4>
+                            <p>Yes! After Facebook announced it was shutting  Parse down, we immediately started working on helping developers transition move to RapidAPI. You can learn how easy it is to migrate  <a href="https://rapidapi.com/parse/" target="_blank">here</a>.</p>
+                        </div>
+                    </div>
+                    <div class="question col-xs-12">
+                        <div class="icon">
+                            <span>?</span>
+                        </div>
+                        <div class="info">
+                            <h4>have any more questions?</h4>
+                            <p style="margin-bottom: 0;"><a href="#contactModal" data-toggle="modal" data-target="#contactModal">Let us know.</a></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<div id="footer-include"></div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 col-sm-6">
+                    <strong>Location</strong><br>
+                    Arie Shenkar 1,<br>
+                    WeWork building,<br>
+                    Herzelia Pituach,<br>
+                    Israel<br>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <strong>JOIN US</strong><br>
+                    We are always looking for awesome people to join us! Like what we are doing and think you can make
+                    it better? Contact Us.
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+                <form action="/api/contactUs" id="contacts" method="post">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Full name:</span>
+                            <input type="text" name="fullname" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Email address:</span>
+                            <input type="text" name="email" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 15px;">
+                        <div class="input-group" style="width: 100%">
+                            <span>Message:</span>
+                            <textarea class="form-control" name="message"
+                                      placeholder="Don't forget that kindness is all!"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Send"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addYourApi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add Your API</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 col-sm-6">
+                    <strong>How it works?</strong><br>
+                    - Arie Shenkar 1<br>
+                    - WeWork building<br>
+                    - Herzelia Pituach<br>
+                    - Get $100!<br>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <strong>What you'll get?</strong><br>
+                    We are always looking for awesome people to join us! Like what we are doing and think you can make
+                    it better? Contact Us.
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+                <form action="/api/contactUs" id="contacts" method="post">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Full name:</span>
+                            <input type="text" name="fullname" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="input-group">
+                            <span>Email address:</span>
+                            <input type="text" name="email" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 15px;">
+                        <div class="input-group" style="width: 100%">
+                            <span>API Description:</span>
+                            <textarea class="form-control" name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Send"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/typed.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+<script src="index-script.js"></script>
+<script>
+    $(function () {
+        $("#footer-include").load("footer.html");
+        $("#nav-include").load("nav.html");
+    });
+    $(function () {
+        $("#service_feature_inner").typed({
+            strings: ["database.save", "facebookAPI.postToWall", "pushNotification.send", "file.upload", "sms.send", "mailchimp.addToList"],
+            typeSpeed: 20,
+            loop: true,
+            backDelay: 500
+        });
+    });
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/grayscale.js"></script>
+<script src="plugins/swipebox/js/jquery.swipebox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="plugins/jquery.nicescroll.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.swipebox-video').swipebox();
+
+        $("#contacts").submit(function (e) {
+            e.preventDefault();
+            var actionurl = e.currentTarget.action;
+            $.ajax({
+                url: actionurl,
+                type: 'post',
+                data: $("#contacts").serialize(),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                success: function (data) {
+                    alert("Sent!");
+                }
+            });
+
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-72666335-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+
+</html>

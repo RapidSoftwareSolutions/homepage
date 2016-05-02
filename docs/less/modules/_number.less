@@ -1,0 +1,31 @@
+.number-box{
+	margin-bottom: 30px;
+	border-right: 1px solid @color_grey-light;
+
+	.numbers > .row > div:last-child &{
+		border: none;
+	}
+}
+
+.number-wrapper{
+	.fz(48);
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	*display: inline;
+	line-height: 50px;
+	font-weight: @font_light;
+}
+	
+.number-description{	
+	.fz(13);
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	*display: inline;
+	max-width: 50px;
+	margin-left: 20px;
+	line-height: 1.4;
+	color: @color_green;
+}
+

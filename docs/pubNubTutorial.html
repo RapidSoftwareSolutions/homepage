@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Page title -->
+	<title>RapidAPI - Docs</title>
+	<!-- Page description -->
+	<meta name="description" content="">
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon  -->
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+<style>
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+
+
+img {
+  max-width: 100%; 
+}
+
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- <link rel="stylesheet" href="css/custom.css"> -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+		<div class="page" id="page-top">
+
+		<!-- Navigation -->
+		<div id="header-include"></div>
+
+
+		<!-- End Page Info -->
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="layout with-left-sidebar">
+							<div class="left-sidebar">
+								<!-- Vertical Menu -->
+								<nav class="js-menu-fixed menu-vertical-wrapper">
+									<ul class="menu-vertical  js-menu-vertical">
+										<li class="selected">
+											<a href="#">Getting started</a>
+											<ul>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1930871-the-basics">The Basics</a>
+												</li>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1945373-databases">Databases</a>
+												</li>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1961629-developing-real-time-apps">Developing real time apps</a>
+												</li>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/2033088-incoming-sms-messagess#">Incoming SMS Messages</a>
+												</li>
+												<li>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Integration</a>
+											<ul>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1930874-ios-swift">iOS & Swift</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Full Project Tutorials</a>
+											<ul>
+												<li>
+													<a href="/docs/tutorial.html">Musicality App</a>
+												</li>
+												<li>
+													<a href="/docs/pubNubTutorial.html">Chatting with PubNub</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!--<div class="separator"></div>-->
+									<!-- Search -->
+									<!--<div class="search">-->
+										<!--<form action="#">-->
+											<!--<input type="text" class="search-input form-control" placeholder="search">-->
+											<!--<i class="fa fa-search search-icon"></i>-->
+										<!--</form>-->
+									<!--</div>-->
+									<!-- End of Search -->
+									<!-- Tags -->
+									<!--<ul class="tags">-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">html</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">css</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">javascript</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">jquery</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">less</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">sass</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">haml</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">gulp</a>-->
+										<!--</li>-->
+									<!--</ul>-->
+									<!-- End of Tags -->
+								</nav>
+								<!-- End of Vertical Menu -->
+							</div>
+							<div class="main-content with-left-sidebar">
+								<!-- Category Info -->
+								<div class="category-info ">
+									<h3 class="category-title">Talk with Friends</h3>
+								</div>
+
+<p>Building apps with RapidAPI and PubNub is incredibly simple. This tutorial will show you how to quickly build a messaging app in both iOS and Android in under 100 lines of code.  Before we start, this tutorial will introduce you to a few technologies we will be using.</p>
+
+<h3 id="toc_1">RapidAPI</h3>
+
+<p>RapidAPI is a system of quickly building a backend without programming.  We will be using RapidAPI simply to send messages to others. If this is your first time building something with RapidAPI, check out our some of our other tutorials.</p>
+
+<h3 id="toc_2">PubNub</h3>
+
+<p>PubNub is a service that makes it incredibly simple to create a <a href="https://en.wikipedia.org/wiki/PubSubHubbub">publish &amp; subscribe system</a>.  We will be using it to subscribe to any message sent by our app or anyone else using our app.  </p>
+
+<h3 id="toc_3">Ionic</h3>
+
+<p>Ionic is way of quickly building iOS and Android applications simultaneously. The applications are written just as you would build the frontend of a website using AngularJS, HTML, CSS and JavaScript. </p>
+
+<h2 id="toc_4">Getting Started</h2>
+
+<p>For this tutorial, we assume that you using OS X or a Linux distribution. To get started, you will need to install Ionic. To do this, simply open up your terminal and type <code>sudo npm install -g ionic</code>. You will then need to type your password. If you would like to follow along with the finished product, you can now run <code>git clone https://www.github.com/rapidsoftwaresolutions/pubnubchat.</code> Otherwise, start a new project by running <code>ionic start myproject</code> where myproject is the name of your project. However before we start working on the app, we need to setup a project on RapidAPI and get our keys from PubNub.</p>
+
+<h3 id="toc_5">Getting Keys from Pubnub</h3>
+
+<p>To get keys from PubNub, go to <code>pubnub.com</code> and click the <code>getting started</code> button. You will then be asked to make an account. You can use the publish and subscribe keys provided to you for free from PubNub.</p>
+
+<h3 id="toc_6">Working with RapidAPI</h3>
+
+<p>Start by making a new, blank project and give it any name you would like. Next, navigate to the endpoints page and create a new <code>POST</code> endpoint named <code>/sendtext</code>. Add the <code>pubnub.toChannel</code> block. This block is stored in the <code>PubNub</code> category. We should add the <code>response.sendMessage</code> block if there is an error or if everything is ok. Your block structure should appears as follows: 
+<img src="../img/pubnub/pubnubBlocks.png" alt="blockStructure"></p>
+
+<p>where <code>PUBLISH KEY</code> and <code>SUBSCRIBE KEY</code> are the keys generated by <code>pubnub.com</code></p>
+
+<h3 id="toc_7">Building the App</h3>
+
+<p>Now that you have an Ionic app, you will be making changes in <code>myproject/www/js</code>, <code>myproject/www/templates</code> and <code>myproject/www/css</code>.  </p>
+
+<p>First, we will create the main Angular app, the <code>app.js</code> file. This will be used for routing between pages. Move this file to exist at the same level as <code>index.html</code> so that it is no longer contained within the js folder. You may now rename the <code>app.js</code> file to <code>index.js</code>.</p>
+
+<p>We need to add our apps dependencies to the module.  We will be using <code>ionic</code>, a login module named <code>login</code>, a chat module named <code>chat</code> and the PubNub Angular module. At the top of your <code>index.js</code> replace any previous module declarations with the following:</p>
+
+<pre><code class="language-none">var app = angular.module(&#39;rapidchat&#39;, [&#39;ionic&#39;,&#39;login&#39;, &#39;chat&#39;, &#39;pubnub.angular.service&#39;]) </code></pre>
+
+<p>Once this is done, we need to configure the states used by our app.  We will have one state for login and one for the actual chat page. To set this up, we write the following code, after the <code>.run</code> function.</p>
+
+<pre><code class="language-none">.config(function($stateProvider, $urlRouterProvider)
+    {
+     $stateProvider
+      .state(&#39;chat&#39;, {
+        url: &quot;/chat/:nickname&quot;,
+        templateUrl: &quot;templates/chat.html&quot;,
+        controller: &quot;chatController&quot;
+      })
+      .state(&#39;login&#39;, {
+        url: &quot;/login&quot;,
+        templateUrl: &quot;templates/login.html&quot;,
+        controller: &quot;LoginController&quot;
+     });
+       $urlRouterProvider.otherwise(&#39;/login&#39;);
+    })
+</code></pre>
+
+<p>This sets up both pages in angular, letting our app know where our HTML and JS is located.  It also prevents people from going to any other pages that we haven&#39;t written, instead redirecting them back to the login page.</p>
+
+<p>Together, the complete file should appear as follows:</p>
+
+<pre><code class="language-none">// Ionic pubnub app
+
+var app = angular.module(&#39;rapidchat&#39;, [&#39;ionic&#39;,&#39;login&#39;, &#39;chat&#39;, &#39;pubnub.angular.service&#39;])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova &amp;&amp; window.cordova.plugins.Keyboard) {
+       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+     }
+     if(window.StatusBar) {
+       StatusBar.styleDefault();
+     }
+   });
+ })
+.config(function($stateProvider, $urlRouterProvider)
+{
+ $stateProvider
+  .state(&#39;chat&#39;, {
+    url: &quot;/chat/:nickname&quot;,
+    templateUrl: &quot;templates/chat.html&quot;,
+    controller: &quot;chatController&quot;
+  })
+  .state(&#39;login&#39;, {
+    url: &quot;/login&quot;,
+    templateUrl: &quot;templates/login.html&quot;,
+    controller: &quot;LoginController&quot;
+ });
+   $urlRouterProvider.otherwise(&#39;/login&#39;);
+})</code></pre>
+
+<p>Next, add two files in the js folder, <code>login.js</code> and <code>chat.js</code>.  For <code>login.js</code>, add the following code. It simply takes the user&#39;s nickname, records it, and sends us to the primary page.</p>
+
+<p>The file is relatively short.   </p>
+
+<pre><code class="language-none">&quot;use strict&quot;
+angular.module(&#39;login&#39;, []).controller(&#39;LoginController&#39;,[&#39;$scope&#39;, &#39;$state&#39;, function($scope,$state) {
+     $scope.login = function(nickname){
+        if(nickname)
+         {
+           $state.go(&#39;chat&#39;,{nickname:nickname})
+          }
+       }
+}]);</code></pre>
+
+<p>Next, in <code>chat.js</code> we will need to add a way to send and receive messages. Create a new module, named <code>chat</code> in which we will add a controller. This should appears as follows:</p>
+
+<pre><code class="language-none">&quot;use strict&quot;
+    var chat = angular.module(&#39;chat&#39;, []);
+    chat.controller(&#39;chatController&#39;, [&#39;$scope&#39;, &#39;$stateParams&#39;, &#39;PubNub&#39;, &#39;$http&#39;, function($scope,    $stateParams, PubNub, $http){ }]); </code></pre>
+
+<p>Since we have already set up an endpoint to send messages, we simply need to send a post request to our endpoint. To do this, simply write a post request within our controller. Using Angular, we just write: </p>
+
+<pre><code class="language-none">$scope.sendMessage = function(){
+    $http.post(&#39;https://chattrbox.imrapid.io/sendtext&#39;, {message : {nickname: nickname , message : $scope.message}})
+    $scope.message = &#39;&#39;;
+}</code></pre>
+
+<p>Here <code>$scope.messages</code> and <code>$scope.sendMessage</code> let Angular know that these values will be taken from and sent to HTML. This function simply takes the text stored in <code>$scope.message</code> and sends it to our endpoint. Next, we need to include a way of listening for sent messages. With PubNub, this is easy. Simply initialize PubNub and listen for an event by writing the following code:</p>
+
+<pre><code class="language-none">PubNub.init({
+    publish_key: PUBLISH KEY,
+    subscribe_key: SUBSCRIBE KEY,
+})
+PubNub.ngSubscribe({ channel: &#39;chattrbox&#39; })
+$scope.$on(PubNub.ngMsgEv(&#39;chattrbox&#39;), function(event, payload) {
+    $scope.messages.push(payload.message)
+});</code></pre>
+
+<p>Together, the entirety of <code>chat.js</code> should appears as follows:</p>
+
+<pre><code class="language-none">&quot;use strict&quot;
+var chat = angular.module(&#39;chat&#39;, []);
+chat.controller(&#39;chatController&#39;, [&#39;$scope&#39;, &#39;$stateParams&#39;, &#39;PubNub&#39;, &#39;$http&#39;, function($scope,    $stateParams, PubNub, $http){
+const nickname = $stateParams;
+$scope.messages = [];
+PubNub.init({
+    publish_key: PUBLISH KEY,
+    subscribe_key: SUBSCRIBE KEY,
+})
+PubNub.ngSubscribe({ channel: &#39;chattrbox&#39; })
+
+$scope.sendMessage = function(){
+    $http.post(&#39;https://chattrbox.imrapid.io/sendtext&#39;, {message : {nickname: nickname , message : $scope.message}})
+    $scope.message = &#39;&#39;;
+}
+
+ $scope.$on(PubNub.ngMsgEv(&#39;chattrbox&#39;), function(event, payload) {
+    $scope.messages.push(payload.message)
+})
+
+}]);
+chat.directive(&#39;ngEnter&#39;, function () {
+    return function (scope, element, attrs) {
+        element.bind(&quot;keydown keypress&quot;, function (event) {
+            if(event.which === 13) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.ngEnter);
+                });
+                event.preventDefault();
+            }
+        });
+    };
+});</code></pre>
+
+<h3 id="toc_8">Adding the HTML &amp; CSS</h3>
+
+<p>Firstly, we need to add the following HTML code to the file <code>index.html</code>. This file loads the libraries, JavaScript and CSS files. We will ensure our code properly runs on the site:</p>
+
+<pre><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html ng-app=&quot;rapidchat&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width&quot;&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src *; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src * &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;&quot;&gt;
+    &lt;title&gt;RapidChat - imrapid.com&lt;/title&gt;
+
+    &lt;link href=&quot;lib/ionic/css/ionic.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    &lt;link href=&quot;css/ionic.app.css&quot; rel=&quot;stylesheet&quot;&gt;
+    --&gt;
+
+    &lt;!-- ionic/angularjs js --&gt;
+    &lt;script src=&quot;http://cdn.pubnub.com/pubnub.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;lib/angular-sanitize/angular-sanitize.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;lib/ionic/js/ionic.bundle.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- cordova script (this will be a 404 during development) --&gt;
+    &lt;script src=&quot;cordova.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- your app&#39;s js --&gt;
+    &lt;script src=&quot;lib/pubnub-angular/lib/pubnub-angular.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/login.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/chat.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body &gt;
+    &lt;ion-nav-view&gt;&lt;/ion-nav-view&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Next, add the following code to <code>login.html</code>, which should be located in the templates folder.</p>
+
+<pre><code class="language-none">&lt;ion-view&gt;
+&lt;ion-content&gt;
+    &lt;div class=&quot;list list-inset top100&quot;&gt;
+        &lt;img src=&quot;img/logo.jpg&quot; class=&quot;logo&quot; /&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;What is your nickname?&quot; ng-model=&quot;nickname&quot;&gt;
+        &lt;/label&gt;
+        &lt;button class=&quot;button button-block button-green&quot; ng-click=&quot;login(nickname)&quot;&gt;Join&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/ion-content&gt;
+&lt;/ion-view&gt;</code></pre>
+
+<p>Finally, complete the HTML by adding a file named `chat.html&#39; within the templates folder with the following content:</p>
+
+<pre><code class="language-none">&lt;ion-view view-title=&quot;RapidChat&quot;&gt;
+    &lt;ion-nav-bar class=&quot;bar-dark&quot;&gt;
+    &lt;ion-nav-buttons side=&quot;right&quot;&gt;
+    &lt;!-- MENU BUTTON --&gt;
+     &lt;!-- &lt;button class=&quot;button button-clear icon ion-android-more-vertical right8&quot; ng-click=&quot;chatCtrl.openPopover($event)&quot;&gt;
+        &lt;/button&gt; --&gt;
+    &lt;/ion-nav-buttons&gt;
+    &lt;/ion-nav-bar&gt;
+    &lt;ion-content has-bouncing=&quot;true&quot; class=&quot;content&quot;&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;log pad2&quot;&gt;Welcome to RapidChat&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li class=&quot;message&quot;  ng-repeat=&quot;message in messages&quot; &gt;
+                &lt;strong&gt;{{message.nickname.nickname}} :&lt;/strong&gt; {{message.message}}
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;/ion-content&gt;
+    &lt;div class=&quot;list bottommsg&quot;&gt;
+        &lt;div class=&quot;item item-input-inset&quot;&gt;
+        &lt;label  class=&quot;item-input-wrapper nopadtop&quot;&gt;
+            &lt;input type=&quot;text&quot;  placeholder=&quot;Message&quot; ng-enter=&quot;sendMessage(message)&quot; autofocus ng-model=&quot;message&quot;&gt; 
+        &lt;/label&gt;
+        &lt;div class=&quot;divsend&quot;&gt;
+                &lt;button class=&quot;button button-clear ion-android-send iconsend&quot; ng-click=&quot;sendMessage(message)&quot;&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;  
+&lt;/ion-view&gt;</code></pre>
+
+<p>Finalize the frontend by adding the following CSS:</p>
+
+<pre><code class="language-none">.pane {
+    background: url(&#39;../img/bg.png&#39;);
+}
+
+.card, .list-inset {
+    background: transparent;
+}
+
+.logo {
+    border-radius: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.item-input-wrapper {
+    background: transparent;
+    border-bottom: 1px solid #ddd;
+}
+
+/*Custom Color*/
+.button.button-green {
+    border: 0;
+    background-color: #2ecc71;
+    color: #fff; }
+
+    .button.button-green:hover {
+        color: #fff;
+        text-decoration: none; }
+
+    .button.button-green.active, .button.button-green.activated {
+        background-color: #2ecc71;
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+
+    .button.button-green.button-clear {
+        border-color: transparent;
+        background: none;
+        box-shadow: none;
+        color: #2ecc71; }
+
+    .button.button-green.button-icon {
+        border-color: transparent;
+        background: none; }
+
+    .button.button-green.button-outline {
+        background: transparent;
+        color: #2ecc71; }
+  .button.button-green.button-outline.active, .button.button-green.button-outline.activated {
+    background-color: #2ecc71;
+    box-shadow: none;
+    color: #fff; }
+
+/*End*/
+
+.light{
+    background-color: #2E2E31;
+}
+
+.linegrey{
+    background-color: #2E2E31;
+    border:none;
+    border-bottom: 1px solid #8DB4B4;
+}
+
+.message {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.message strong {
+    color: #3F5A73;
+}
+
+.bar.bar-dark {
+    background-color: #3F5A73;
+}
+
+.top100{
+    margin-top: 100px;
+    text-align: center;
+}
+
+input.white{
+    color:#fff;
+    font-size:18px;
+}
+
+.right8{
+    right: 8px;
+}
+
+.light-grey{
+    background-color: #EDEBEE;
+    border:0px;
+}
+
+.line-light-grey{
+    background-color: #EDEBEE;
+    border:none;
+    border-bottom: 1px solid #8DB4B4;
+}
+
+.bottommsg{
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+}
+
+.divsend{
+    background-color:#2ecc71;
+    margin-left: 7px;
+    border-radius: 100%;
+}
+
+.divsend button.button-clear.button-clear {
+    color: #fff;
+}
+
+.iconsend{
+    font-size: 18px;
+}
+
+.width70{
+    width: 75%;
+    margin-right:0px; 
+}
+
+.log{
+    text-align:center;
+    font-size: 13px;
+    color: #8A8A8A;
+    padding: 7px 14px 7px 14px;
+
+}
+
+.message{
+    padding: 7px 14px 7px 14px;
+    font-size: 16px;
+}
+
+.nopadtop{
+padding-top: 0px;
+}
+
+.content{
+    bottom:68px;
+}</code></pre>
+
+<p>Now, your app is ready to go!</p>
+	</div>
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<div id="footer-include"></div>
+	</div>
+	<script src="js/all.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script>
+		$(function(){
+			$("#footer-include").load("footer.html");
+			$("#header-include").load("header.html");
+			$("#left-sidebar-include").load("left-sidebar.html");
+		});
+	</script>
+</body>
+
+</html>

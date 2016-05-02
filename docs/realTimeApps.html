@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Page title -->
+	<title>RapidAPI - Docs</title>
+	<!-- Page description -->
+	<meta name="description" content="">
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon  -->
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+	<!-- Include StyleSheets -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- <link rel="stylesheet" href="css/custom.css"> -->
+	<script src="js/modernizr.js"></script>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+	    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="page" id="page-top">
+
+		<!-- Navigation -->
+		<div id="header-include"></div>
+
+
+		<!-- End Page Info -->
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="layout with-left-sidebar">
+							<div class="left-sidebar">
+								<!-- Vertical Menu -->
+								<nav class="js-menu-fixed menu-vertical-wrapper">
+									<ul class="menu-vertical  js-menu-vertical">
+										<li class="selected">
+											<a href="#">Getting started</a>
+											<ul>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1930871-the-basics">The Basics</a>
+												</li>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1945373-databases">Databases</a>
+												</li>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1961629-developing-real-time-apps">Developing real time apps</a>
+												</li>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/2033088-incoming-sms-messagess#">Incoming SMS Messages</a>
+												</li>
+												<li>
+													<a href="#">RECENT Q&A</a>
+													<ul>
+														<li>
+															<a href="https://imrapid.desk.com/customer/portal/questions/11666525-sign-up-system">Sign up system</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Integration</a>
+											<ul>
+												<li>
+													<a href="https://imrapid.desk.com/customer/portal/articles/1930874-ios-swift">iOS & Swift</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Full Project Tutorials</a>
+											<ul>
+												<li>
+													<a href="/docs/tutorial.html">Musicality App</a>
+												</li>
+												<li>
+													<a href="/docs/pubNubTutorial.html">Chatting with PubNub</a>
+												</li>											
+												</ul>
+										</li>
+									</ul>
+									<!--<div class="separator"></div>-->
+									<!-- Search -->
+									<!--<div class="search">-->
+										<!--<form action="#">-->
+											<!--<input type="text" class="search-input form-control" placeholder="search">-->
+											<!--<i class="fa fa-search search-icon"></i>-->
+										<!--</form>-->
+									<!--</div>-->
+									<!-- End of Search -->
+									<!-- Tags -->
+									<!--<ul class="tags">-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">html</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">css</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">javascript</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">jquery</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">less</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">sass</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">haml</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">gulp</a>-->
+										<!--</li>-->
+									<!--</ul>-->
+									<!-- End of Tags -->
+								</nav>
+								<!-- End of Vertical Menu -->
+							</div>
+							<div class="main-content with-left-sidebar">
+								<!-- Category Info -->
+								<div class="category-info ">
+									<h3 class="category-title">Building Real Time Apps with RapidAPI</h3>
+								</div>
+								<!-- End of Caregory Info -->
+
+								<h2 class="c2 c4 subtitle"><br />
+								Why real time?</h2>
+
+								<p class="c2">With the regular way of building web services, every time the software (website / app) wants a certain piece of information, it makes a request to the server, which sends back that piece of data. That basic approach works for many scenarios - for example, getting a list of users, a user&#39;s profile page, a news article and so on...<br />
+								&nbsp;</p>
+
+								<p class="c2">But on some occasions, this approach fails. For example, let&rsquo;s say you are building a chat app. You will need a way for the client to receive new messages as they are sent. The regular method doesn&rsquo;t work here as the client can&rsquo;t request that data - there is no way for the client to know when new messages are sent so he can request them (of course he can request all the previous messages when he loads the app, but not new ones).<br />
+								&nbsp;</p>
+
+								<p class="c2">Thus, we need a mechanism that allows our web service to send messages directly to clients and notify them when things happen. This is extremely useful for places where data changes in real time, such as chats, polls, stocks, whether and so on...<br />
+								&nbsp;</p>
+
+								<h2 class="c2 c4 subtitle">Using RapidAPI</h2>
+
+								<p class="c2 c10"><span style="line-height: 1.6em;">RapidAPI allows you to utilize the power of WebSockets to create real time apps in minutes. With websockets, your app / website can create a connection with the server, and receive real time events. For example, if you are creating a chat app, the app can connect to the server, and then each time a new message is sent, the server will tell the app thru the connection.</span><br />
+								&nbsp;</p>
+
+								<h2 class="c2 c4 subtitle">How it all works?</h2>
+
+								<p class="c2">There are 2 main components to using websocket - the front end app listening to events, and the endpoint emitting them. The endpoint can emit an&nbsp;<span class="c7" style="font-style: italic;">event</span>&nbsp;to a&nbsp;<span class="c7" style="font-style: italic;">room</span>, and every client listening for such event in such room will be notified - by having a certain function called. Let&rsquo;s see what that would look like:<br />
+								&nbsp;</p>
+
+								<p class="c2">Let&rsquo;s say you have a chat app<br />
+								<br />
+								<br />
+								<img alt="" src="../img/realTime/realTimeDiagram.png" style="width: 400px; height: 225px;" /><br />
+								&nbsp;</p>
+
+								<p class="c2">As you can see, there are several steps taking place here:<br />
+								&nbsp;</p>
+
+								<ol class="c16 lst-kix_vmyr7m9rmz48-0 start" start="1">
+								  <li class="c2 c13"><span class="c1" style="font-weight: bold;">User 1</span>&nbsp;sends a message by posting a request to a certain endpoint with his message and with the room he is sending it into.</li>
+								  <li class="c2 c13"><span class="c1" style="font-weight: bold;">The endpoint</span>&nbsp;uses a special block to&nbsp;<span class="c7" style="font-style: italic;">Publish</span>&nbsp;the message (as a &lsquo;message&rsquo; event) in the room.</li>
+								  <li class="c2 c13"><span class="c1" style="font-weight: bold;">All the users in the room</span>&nbsp;get notified with the new message.</li>
+								</ol>
+
+								<p class="c2"><br />
+								This tutorial will have 2 parts: publishing events (using a block) and listening to events - in the front end. The way you are listening to events depends on the platform and programming language you are using. We will try to cover as many platforms and languages in this tutorial.<br />
+								&nbsp;</p>
+
+								<h2 class="c2 c4 subtitle">Publishing an event in a room</h2>
+
+								<p class="c2">To have a certain endpoint publish an event in a room, we will use the publish.toRoom block:<br />
+								&nbsp;</p>
+
+								<p class="c2 c10"><img alt="" src="../img/realTime/publishToRoom.png" style="width: 400px; height: 196px;" /><br />
+								&nbsp;</p>
+
+								<p class="c2">As you can see, the block receives 3 arguments:<br />
+								&nbsp;</p>
+
+								<ul class="c16 lst-kix_petdxpmlwfj-0 start">
+								  <li class="c2 c13"><span class="c1" style="font-weight: bold;">room</span>&nbsp;- the room that the event will be published to</li>
+								  <li class="c2 c13"><span class="c1" style="font-weight: bold;">event</span>&nbsp;- the event you are willing to publish</li>
+								  <li class="c2 c13"><span class="c1" style="font-weight: bold;">data</span>&nbsp;- the data that will be passed to all the users in the room. It&rsquo;s formatted as key-value, and can hold any data</li>
+								</ul>
+
+								<p class="c2"><br />
+								So in our example, in the endpoint message, the user sending the message will pass the&nbsp;<span class="c7" style="font-style: italic;">room</span>&nbsp;and&nbsp;<span class="c7" style="font-style: italic;">message</span>&nbsp;in the request body, and thus will publish the event as following:<br />
+								<br />
+								<img alt="" src="../img/realTime/PtRExample.png" style="width: 400px; height: 214px;" /><br />
+								&nbsp;</p>
+
+								<h2 class="c2 c4 subtitle">Listening to events in JavaScript</h2>
+
+								<p class="c2">First of all, you will need to include our IO javascript library by writing:<br />
+								&nbsp;</p>
+
+								<p class="c2 c11"><span style="font-family: Consolas; line-height: 20.7999992370605px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">&lt;script</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c12" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">src</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c14" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas; text-decoration: underline;"><a class="c15" href="https://www.google.com/url?q=https%3A%2F%2Fimrapid.co%2Flibs%2FIO.js&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGqdv8HGGZ66JChyjPt0D5ymv9RVg">https://imrapid.co/libs/IO.js</a></span><span class="c14" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">&gt;&lt;/script&gt;</span></p>
+
+								<p class="c2"><br />
+								Now that this script is loaded, we will use the&nbsp;<span class="c7" style="font-style: italic;">createIO</span>&nbsp;function to start listening for events.</p>
+
+								<p class="c2">First of all, create the object that will hook up to a room like that:<br />
+								&nbsp;</p>
+
+								<p class="c2 c11"><span style="font-family: Consolas; line-height: 20.7999992370605px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;room&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;createIO</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">projectName</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;roomName</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">);</span></p>
+
+								<p class="c2"><br />
+								Project name is the name of your project (the project name appears in the beginning of the URLs you are using - https://<span class="c7" style="font-style: italic;">projectName</span>.imrapid.io).&nbsp;<span style="line-height: 1.6em;">Room name is the name of the room you want to listen for events on.</span></p>
+
+								<p class="c2">Now that we are hooked to the room, the last thing to do will be to start listening for events on it, which looks like that:<br />
+								&nbsp;</p>
+
+								<p class="c2"><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;room</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">on</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(&#39;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">event</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&#39;,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">function</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">data</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;{</span></p>
+
+								<p class="c2"><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c8" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//Will be called everytime the event is published</span></p>
+
+								<p class="c2"><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c8" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//data will hold the data published in the event</span></p>
+
+								<p class="c2"><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">});</span></p>
+
+								<p class="c2"><br />
+								That&rsquo;s it! You can of course listen to multiple events in the same room, or even listen to events on multiple rooms with multiple room objects.</p>
+
+								<p class="c2 c10">&nbsp;</p>
+
+								<p class="c2">For example, if we want to listen to &lsquo;message&rsquo; event in the room &lsquo;Birthdaty&rsquo; in the project &lsquo;myProject&rsquo;, and alert the user each time a new message arrives, we will use:</p>
+
+								<p class="c2 c11 c10">&nbsp;</p>
+
+								<p class="c2 c11"><span style="font-family: Consolas; line-height: 20.7999992370605px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;room&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;createIO</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(&#39;</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">myProject</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&#39;,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&#39;</span><span class="c12" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">Birthday</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&#39;);</span></p>
+
+								<p class="c2 c11"><span style="font-family: Consolas; line-height: 20.7999992370605px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">room</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">on</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(&#39;</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">message</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&#39;,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c9" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">function</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">data</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;{</span></p>
+
+								<p class="c2 c11"><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: Consolas; line-height: 20.7999992370605px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">alert</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(&#39;</span><span class="c12" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">New</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;message</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&#39;</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">+</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;data</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">message</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">);</span></p>
+
+								<p class="c2 c11"><span style="font-family: Consolas; line-height: 20.7999992370605px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="c3" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">});</span></p>
+
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<div id="footer-include"></div>
+	</div>
+	<script src="js/all.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script>
+		$(function(){
+			$("#footer-include").load("footer.html");
+			$("#header-include").load("header.html");
+			$("#left-sidebar-include").load("left-sidebar.html");
+		});
+	</script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!-- 
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+     -->
+</body>
+
+</html>

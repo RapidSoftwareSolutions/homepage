@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Page title -->
+	<title>RapidAPI - Docs</title>
+	<!-- Page description -->
+	<meta name="description" content="">
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon  -->
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+	<!-- Include StyleSheets -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- <link rel="stylesheet" href="css/custom.css"> -->
+	<script src="js/modernizr.js"></script>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+	    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="page" id="page-top">
+
+		<!-- Navigation -->
+		<div id="header-include"></div>
+
+
+		<!-- End Page Info -->
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="layout with-left-sidebar">
+							<div class="left-sidebar">
+								<!-- Vertical Menu -->
+								<nav class="js-menu-fixed menu-vertical-wrapper">
+									<ul class="menu-vertical  js-menu-vertical">
+										<li>
+											<a href="#">Getting started</a>
+											<ul>
+												<li>
+													<a href="/docs/basics.html">The Basics</a>
+												</li>
+												<li>
+													<a href="/docs/databases.html">Databases</a>
+												</li>
+												<li>
+													<a href="/docs/realTimeApps.html">Developing real time apps</a>
+												</li>
+												<li>
+													<a href="/docs/recievingTextMessages.html">Incoming SMS Messages</a>
+												</li>
+											</ul>
+										</li>
+										<li class="selected">
+											<a href="#">Integration</a>
+											<ul>
+												<li>
+													<a href="">iOS & Swift</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Full Project Tutorials</a>
+											<ul>
+												<li>
+													<a href="/docs/tutorial.html">Musicality App</a>
+												</li>
+												<li>
+													<a href="/docs/pubNubTutorial.html">Chatting with PubNub</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!--<div class="separator"></div>-->
+									<!-- Search -->
+									<!--<div class="search">-->
+										<!--<form action="#">-->
+											<!--<input type="text" class="search-input form-control" placeholder="search">-->
+											<!--<i class="fa fa-search search-icon"></i>-->
+										<!--</form>-->
+									<!--</div>-->
+									<!-- End of Search -->
+									<!-- Tags -->
+									<!--<ul class="tags">-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">html</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">css</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">javascript</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">jquery</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">less</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">sass</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">haml</a>-->
+										<!--</li>-->
+										<!--<li class="tag-item">-->
+											<!--<a href="#">gulp</a>-->
+										<!--</li>-->
+									<!--</ul>-->
+									<!-- End of Tags -->
+								</nav>
+								<!-- End of Vertical Menu -->
+							</div>
+							<div class="main-content with-left-sidebar">
+								<!-- Category Info -->
+								<div class="category-info ">
+									<h3 class="category-title">Intigrating with iOS</h3>
+								</div>
+								<!-- End of Caregory Info -->
+
+
+
+         <p class="c10"><span class="c24" style="font-style: italic;">This tutorial is for developers building iOS apps using the swift programing language.</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10">To make your app interact with your RapidAPI system, all you have to do is make an HTTP request to an endpoint in your project. While you can do this with the built in networking libraries such as NSURLConnection, it&rsquo;s usually more comfortable to use one of the many widely available open source libraries, as they generally make life much easier and automate most of the process for you.</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10">The library we will be using is called SwiftHTTP, and it&rsquo;s very popular and simple to use in Swift applications.</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10">The first step will be to install SwiftHTTP in your project which can be done natively / using cocoapods.</p>
+
+<p class="c7">&nbsp;</p>
+
+<h2 class="c10 c11 subtitle">Installing with Cocoapods:</h2>
+
+<p class="c10">If you have never used cocoapods, check out<span class="c1 c8" style="color: rgb(51, 51, 51);">&nbsp;</span><span class="c1 c25" style="color: rgb(65, 131, 196);"><a class="c9" href="http://www.google.com/url?q=http%3A%2F%2Fcocoapods.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEN62SoudMXGbJUQYC4vVGV_qsFrA">Get Started</a></span><span class="c1 c8" style="color: rgb(51, 51, 51);">&nbsp;tab on&nbsp;</span><span class="c1 c25" style="color: rgb(65, 131, 196);"><a class="c9" href="http://www.google.com/url?q=http%3A%2F%2Fcocoapods.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEN62SoudMXGbJUQYC4vVGV_qsFrA">cocoapods.org</a></span><span class="c1 c8" style="color: rgb(51, 51, 51);">.</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10">In your Podfile just add</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10 c16"><span class="c0" style="font-size: 9pt; font-family: Consolas;">source&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&#39;https://github.com/CocoaPods/Specs.git&#39;</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">platform&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">ios</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&#39;8.0&#39;</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">use_frameworks</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">!</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">pod&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&#39;SwiftHTTP&#39;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&#39;~&gt; 0.9.2&#39;</span></p>
+
+<p class="c10">And then run the following line in the terminal in the project directory</p>
+
+<p class="c10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p class="c10"><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pod install</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c7 c27">&nbsp;</p>
+
+<h2 class="c10 c11 subtitle">Installing manually:</h2>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">Simply grab the framework (can be downloaded from github:</span><span class="c15 c1" style="color: rgb(17, 85, 204); text-decoration: underline;"><a class="c9" href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fdaltoniam%2FSwiftHTTP&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFmb6mzDpdguDpfB9lyceCGoJi5gQ">https://github.com/daltoniam/SwiftHTTP</a></span><span class="c1 c8" style="color: rgb(51, 51, 51);">) and add the&nbsp;</span><span class="c1 c8 c21" style="font-size: 10pt; font-family: Consolas; color: rgb(51, 51, 51);">SwiftHTTP.xcodeproj</span><span class="c1 c8" style="color: rgb(51, 51, 51);">&nbsp;to your Xcode project. Once that is complete, in your &quot;Build Phases&quot; add the&nbsp;</span><span class="c21 c1 c8" style="font-size: 10pt; font-family: Consolas; color: rgb(51, 51, 51);">SwiftHTTP.framework</span><span class="c1 c8" style="color: rgb(51, 51, 51);">&nbsp;to your &quot;Link Binary with Libraries&quot; phase.</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<h2 class="c10 c11 subtitle">Importing SwiftHTTP:</h2>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">Now that you have SwiftHTTP installed in your project, import it where you want to use it by adding</span></p>
+
+<p class="c10 c17 c23"><span class="c12" style="color: rgb(167, 29, 93); font-size: 10pt; font-family: Consolas; background-color: rgb(247, 247, 247);">import</span><span class="c18 c8" style="font-size: 10pt; font-family: Consolas; color: rgb(51, 51, 51); background-color: rgb(247, 247, 247);">&nbsp;</span><span class="c18 c19" style="font-size: 10pt; font-family: Consolas; color: rgb(0, 134, 179); background-color: rgb(247, 247, 247);">SwiftHTTP</span></p>
+
+<h2 class="c10 c11 subtitle"><br />
+Paths:</h2>
+
+<p class="c10">To access a certain endpoint in your project, you&rsquo;ll have to use it&rsquo;s URL. When you created the endpoint, you gave it a certain path (something like /blahblah). So the URL you will use to access it is:</p>
+
+<p class="c10 c22"><span class="c15" style="color: rgb(17, 85, 204); text-decoration: underline;"><a class="c9" href="https://www.google.com/url?q=https%3A%2F%2Fyourprojectname.imrapid.io%2Fblahblah&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNENooew4wdqhQaOa3RZXDatgndYXg">https://</a></span><span class="c15 c20" style="color: rgb(17, 85, 204); text-decoration: underline; font-weight: bold;"><a class="c9" href="https://www.google.com/url?q=https%3A%2F%2Fyourprojectname.imrapid.io%2Fblahblah&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNENooew4wdqhQaOa3RZXDatgndYXg">yourProjectName</a></span><span class="c15" style="color: rgb(17, 85, 204); text-decoration: underline;"><a class="c9" href="https://www.google.com/url?q=https%3A%2F%2Fyourprojectname.imrapid.io%2Fblahblah&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNENooew4wdqhQaOa3RZXDatgndYXg">.imrapid.io</a></span><span class="c15 c20" style="color: rgb(17, 85, 204); text-decoration: underline; font-weight: bold;"><a class="c9" href="https://www.google.com/url?q=https%3A%2F%2Fyourprojectname.imrapid.io%2Fblahblah&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNENooew4wdqhQaOa3RZXDatgndYXg">/blahblah</a></span></p>
+
+<p class="c7">&nbsp;</p>
+
+<h2 class="c10 c11 subtitle">Making a GET requests:</h2>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">If you have a GET endpoint you have created and you want to access it, use the following code, which will get a string of text from that endpoint:</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10 c17"><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;request&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPTask</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">GET</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;https://projectName.imrapid.io/path&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;parameters</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">nil</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;success</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c1 c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">if</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;let data&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">responseObject&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">as</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSData</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;let str&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSString</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">data</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;data</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;encoding</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;NSUTF8StringEncoding</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;println</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;response: \(str)&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c4 c1" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//prints the HTML of the page</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">}</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">},</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">failure</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">error</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSError</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;println</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;error: \(error)&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">})</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">If you want to get an object from your endpoint (for example, if the endpoint returns JSON or returns a document it found in a database), use:</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10 c27"><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;request&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPTask</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c4 c1" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//The parameters will be encoding as JSON data and sent.</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">requestSerializer&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">JSONRequestSerializer</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c4 c1" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//The expected response will be JSON and be converted to an object return by NSJSONSerialization instead of a NSData.</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">responseSerializer&nbsp;</span><span class="c1 c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">JSONResponseSerializer</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">GET</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;https://projectName.imrapid.io/path&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;parameters</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">nil</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;success</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">if</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;let dict&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">responseObject&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">as</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">Dictionary</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&lt;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">String</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c1 c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">AnyObject</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&gt;</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;println</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;example of the JSON key: \(dict[&quot;</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">key</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;])&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;println</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;print the whole response: \(response)&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">}</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">},</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">failure</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">error</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSError</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;println</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;error: \(error)&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">})</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">In this example,&nbsp;</span><span class="c1 c8 c20" style="color: rgb(51, 51, 51); font-weight: bold;">dict</span><span class="c1 c8" style="color: rgb(51, 51, 51);">&nbsp;will be the object received from the endpoint.</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<h2 class="c10 c11 subtitle">Making a POST requests:</h2>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">Making a POST request is a lot like making a GET request:</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10 c17"><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;request&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPTask</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c1 c4" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//we have to add the explicit type, else the wrong type is inferred. See the vluxe.io article for more info.</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">let&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">params</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">Dictionary</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&lt;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">String</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">AnyObject</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">&gt;</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">[</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;param&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;param1&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;array&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">[</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;first array element&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;second&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;third&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">],</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;num&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c1 c13" style="color: rgb(0, 102, 102); font-size: 9pt; font-family: Consolas;">23</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;dict&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">[</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;someKey&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;someVal&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">]]</span><br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">POST</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;https://projectName.imrapid.io/path&quot;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;parameters</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">params</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;success</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">},</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">failure</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">error</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSError</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5 c1" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?)</span><span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3 c1" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<br />
+<span class="c0 c1" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2 c1" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">})</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10"><span class="c1 c8" style="color: rgb(51, 51, 51);">Notice that using the&nbsp;</span><span class="c1 c8 c20" style="color: rgb(51, 51, 51); font-weight: bold;">parameters</span><span class="c1 c8" style="color: rgb(51, 51, 51);">&nbsp;arguments you can pass the request body arguments.</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<h2 class="c10 c11 subtitle">Other request types:</h2>
+
+<p class="c10">Similarly, you can also make a PUT request:</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10 c17"><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;request&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPTask</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">PUT</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">https://projectName.imrapid.io/path</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;parameters</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">[</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;param&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;hi&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;something&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;else&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;key&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;value&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;success</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">response</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c4" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//do stuff</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">},</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">failure</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">error</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSError</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?)</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c4" style="color: rgb(136, 0, 0); font-size: 9pt; font-family: Consolas;">//error out on stuff</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">})</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10">And a delete request:</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10 c17"><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">var</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;request&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">=</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPTask</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">()</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">request</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">.</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">DELETE</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;</span><span class="c6 c1" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">https://projectName.imrapid.io/path</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;parameters</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">nil</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;success</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">response</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp;println</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;DELETE was successful!&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">},</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">failure</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">{(</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">error</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">NSError</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">,</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;response</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">:</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c5" style="color: rgb(102, 0, 102); font-size: 9pt; font-family: Consolas;">HTTPResponse</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">?)</span><span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp;</span><span class="c3" style="color: rgb(0, 0, 136); font-size: 9pt; font-family: Consolas;">in</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; println</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">(</span><span class="c6" style="color: rgb(0, 136, 0); font-size: 9pt; font-family: Consolas;">&quot;print the error: \(error)&quot;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">)</span><br />
+<span class="c0" style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp;</span><span class="c2" style="color: rgb(102, 102, 0); font-size: 9pt; font-family: Consolas;">})</span></p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c7">&nbsp;</p>
+
+<p class="c10">And that&rsquo;s the basic of making HTTP requests to your project from your iOS apps. For more information, you can head over to&nbsp;<span class="c15" style="color: rgb(17, 85, 204); text-decoration: underline;"><a class="c9" href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fdaltoniam%2FSwiftHTTP&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFmb6mzDpdguDpfB9lyceCGoJi5gQ">https://github.com/daltoniam/SwiftHTTP</a></span>&nbsp;.</p>
+
+
+
+
+								<!-- Navigation -->
+								<!--<ul class="navigation">-->
+									<!--<li class="navigation-previous">-->
+										<!--<a href="#">Previous article</a>-->
+									<!--</li>-->
+									<!--<li class="navigation-next">-->
+										<!--<a href="#">Next article</a>-->
+									<!--</li>-->
+								<!--</ul>-->
+								<!-- End of Navigation -->
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-include"></div>
+	</div>
+	<script src="js/all.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script>
+		$(function(){
+			$("#footer-include").load("footer.html");
+			$("#header-include").load("header.html");
+			$("#left-sidebar-include").load("left-sidebar.html");
+		});
+	</script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!-- 
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+     -->
+</body>
+
+</html>
